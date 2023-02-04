@@ -1,0 +1,537 @@
+*{
+    font-size: 62,5%;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+section{
+    min-height: 100vh;
+    display: flex;
+    width: 100vw;
+    flex-flow: column wrap;
+    font-size: 1.2rem;
+    align-items: center;
+    padding: 0rem;
+    color: darkblue;
+}
+
+section button{
+    background-color: darkblue;
+    border-radius: 0.2rem;
+    color: whitesmoke;
+    padding: 0.2rem 0.4rem;
+
+}
+
+.barra{
+    height: 4rem;
+    width: 100%;
+}
+
+aside{
+    position: fixed;
+    width: 100%;
+    background-color:darkblue;
+    min-height: 3rem;   
+}
+
+section h1{
+    margin-top: 1rem;
+}
+
+.menu{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    height: auto;
+    font-size: 1.4rem;
+    color: whitesmoke;
+    max-width: 90%;
+    padding: 1rem 1rem;
+}
+
+
+
+.menu nav ul{
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;    
+}
+
+.menu nav ul li a{
+    text-decoration-line: none;
+    color: whitesmoke;
+    display: block;
+    position: relative;
+}
+
+.menu nav ul li a::after{
+    content: " ";
+    background-color: whitesmoke;
+    width: 0%;
+    height: 0.1rem;
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    transition: all 400ms ease-in-out;
+}
+
+.menu nav ul li a:hover::after{
+    content: " ";
+    background-color: whitesmoke;
+    width: 100%;
+    left: 0%;
+    height: 0.1rem;
+    bottom: 0;
+    position: absolute;
+}
+
+.res:hover{
+    transform: rotate(-360deg);
+    transition: 1500ms ease-in-out; 
+}
+
+
+#clcr{
+    background-image:  
+    url("https://media.istockphoto.com/photos/woman-holding-model-kidney-halves-at-body-picture-id629358512?b=1&k=20&m=629358512&s=170667a&w=0&h=KxBL87m3flShpv5EJEO1OA47SJwar_hU-H4NZLmGVSw=");
+    background-size: cover;
+    background-position: center;  
+}
+
+.clcr{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;  
+    margin-top: 4rem;  
+}
+
+.clcr h1{
+    margin-bottom: 2rem;
+}
+
+.clcr1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem 5rem;
+    gap: 2rem;
+}
+
+.clcr1 div{
+    text-align-last: center;
+    border: 0.2rem solid darkblue;
+    padding: 2rem 1rem;
+    border-radius: 5%;
+}
+
+.ajuste div{
+    text-align-last: center;
+    border: 0rem solid darkblue;
+    padding: 3rem 3rem;
+    border-radius: 30%;
+}
+
+
+.clcr1 div label, .ajuste div label{
+    display: block;
+}
+
+.clcr div button{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.clcr input:focus{
+    color: darkblue;
+    outline-color: darkblue;    
+}
+
+.clear{
+    transition: all 300ms ease-in-out;
+}
+
+.clear:hover{
+    background-color: rgba(176, 196, 222, 0.507);
+    border: 0.2rem solid rgba(0, 0, 139, 0.144);
+    border-radius: 5%;
+}
+
+#ajuste{
+    background-color: white;
+    background-image: 
+    url("/assets/image/Clearancedecreatinina.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;  
+}
+
+.ajuste{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.4rem;
+    margin-top: 4rem;  
+}
+
+.ajuste form{
+    transition: all 300ms ease-in-out;
+    border-radius: 1rem;  
+    border: 0.4rem solid rgba(0, 0, 139, 0);
+    padding: 2rem;
+
+}
+.ajuste form:hover{
+    border: 0.4rem solid darkblue;
+    background-color: rgba(141, 141, 221, 0.575);
+}
+
+.ajuste h5{
+    align-items: center;
+    text-align: center;
+}
+
+.lado{
+    display: grid;
+    grid-template-columns: 320px 1fr;
+}
+
+.ajuste div{
+    padding: 3rem 6rem;  
+}
+
+/*.ajuste div:hover{
+    background-color: rgba(231, 162, 145, 0.507) ;     
+}
+*/
+
+.ajuste label{
+    padding: 0.3rem;
+    margin-top: 0;
+}
+
+.ajuste input:focus{
+    color: darkblue;
+    outline-color: darkblue;
+}
+
+.ajuste button{
+    margin-top: 1rem;
+}
+
+
+.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1rem 3rem;
+    gap: 2rem;
+}
+
+.form div{
+    text-align-last: center;
+    border: 0.2rem solid darkblue;
+    padding: 2rem 1rem 4rem 1rem;
+    text-align: justify;
+}
+
+.form div label{
+    display: block;
+}
+
+
+.form div:hover{
+    background-color: rgba(176, 196, 222, 0.507) ;     
+}
+
+.form label{
+    padding: 0.1rem;
+    margin-top: 0;
+}
+
+.form input:focus{
+    color: darkblue;
+    outline-color: darkblue;
+}
+
+.form button{
+     margin-top: 1rem;
+     margin-bottom: 1rem;   
+}
+
+.form h3{
+    margin-bottom: 2rem;
+}
+
+.form .mass h5{
+    text-align:initial;  
+}
+
+
+.outros{
+    background-image: 
+    url(./image/card.JPG);
+    background-size: 600px 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+#outros h3 a{
+    text-decoration-line: none;
+    color: rgb(3, 3, 77);
+    display: block;
+    position: relative;
+    gap: 2rem;
+    margin-top: 5rem;   
+    
+}
+
+#outros h3 a::after{
+    content: " ";
+    background-color: rgb(3, 3, 77);
+    width: 0;
+    height: 0.1rem;
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    transition: all 500ms ease-in-out;
+}
+
+#outros h3 a:hover::after{
+    content: " ";
+    background-color: rgb(3, 3, 77);
+    width: 0;
+    left: 0%;
+    height: 0.1rem;
+    bottom: 0;
+    position: absolute;   
+}
+
+
+
+
+.ima{  
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    width: auto;
+    color: rgba(176, 30, 30, 0);
+    transition: all 500ms ease-in-out; 
+    bottom: 1rem;
+    left: 50%;
+    right: 50%;
+    margin: 0 auto;
+}
+
+.imagem{
+    width: 3rem;   
+}
+
+
+.imagem:hover{
+   
+    transition: all 800ms ease-in-out;
+    animation: pulse 2.5s ease 0s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+  }
+
+.azul{
+    color: darkblue;
+}
+
+.lin{
+    position: relative;
+    margin-bottom: 0;
+}
+
+.close{
+    display: none;
+}
+
+.res{
+    height: 2rem;
+}
+
+@media(max-width:1366px){
+    .clcr{
+        margin-top: 0rem;  
+    }
+    
+    .clcr h1{
+        margin-bottom: 0rem;
+    }
+}
+
+.ajuste{
+    margin-top: 0;
+}
+
+#ajust{
+    margin-top: -2rem;
+}
+
+.campo{
+    gap: 0;
+    margin-top: -2rem;
+}
+
+@media(max-width: 720px){
+    aside{
+        bottom: 0;
+        top: 0;  
+        justify-content: center;   
+        max-width: 100vw; 
+        max-height: 100vh;   
+    }
+    .menu{
+        gap: 2rem;
+        flex-direction: column;
+        justify-content: center;
+        height: 90vh;
+        color: darkblue;
+        font-size: 2.0rem;
+        margin-bottom: 50rem;
+    }
+    .menu nav ul{
+        flex-direction: column;
+        align-items: center;
+        color: darkblue;
+        
+    }
+
+    .menu nav ul li a{
+        color: darkblue;
+    }
+
+    .menu nav ul li img{
+        background-color: darkblue;
+        border-radius: 50%;
+    }
+
+    .res{
+        height: 2.8rem;
+    }
+
+    .menu nav ul li a:hover:after{
+        background-color: darkblue;
+    }
+    aside{
+        display: none;
+        background-color: whitesmoke;   
+    }
+
+    .close{
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;  
+    }
+
+    .closelabel::after{
+        content: "≡";
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background-color: darkblue;
+        color: white;
+        font-size: 5rem;
+        line-height: 3rem;
+        height: 3rem;
+        width: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    .close:checked~aside{
+        display: block;
+    }
+
+    .close:checked~.closelabel::after{
+        content: '×';
+    }
+
+    #ajuste{
+        max-width: 100vw; 
+        background-image: none;
+    }
+
+    .ajuste{
+        height: 100vh;
+        max-width: 100%;
+        font-size: 1.8rem;
+        margin-top: -8rem;
+    }
+
+    form button{
+        font-size: 1.0rem;
+    }
+
+    .lado{
+        max-width: 100vw;
+        max-height: 100vh;
+        grid-template-columns: 0 1fr;
+    }
+
+    #ajust{
+        max-width: 90%;
+    }
+}
+
+@media(max-width: 420px) {
+    .ajuste{
+        max-width: 420px;
+        align-items: center;
+        justify-items: center;
+        font-size: 1.2rem;
+        margin-top: -4rem;
+    }
+
+    #ajust{
+        max-width: 300px;
+        margin-top: -1rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media(max-width: 320px){
+    .ajuste{
+        max-width: 300px;
+        align-items: center;
+        justify-items: center;
+        font-size: 1.0rem;
+        margin-top: -4rem;
+    }
+
+    #ajust{
+        max-width: 260px;
+        margin-top: -1rem;
+        font-size: 0.8rem;
+    }
+
+}

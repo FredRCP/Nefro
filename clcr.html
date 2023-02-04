@@ -1,0 +1,46 @@
+<section id="clcr">
+    <div class="barra"></div><br>
+    <div class="clcr">
+        <h1>Clearance de Creatinina</h1>
+        <div class="clcr1">
+            <div class="clear ck">
+                <h3>CKD-EPI 2021</h3>
+                <p>(Indicada para pacientes ambulatoriais)</p><br>
+                <label for="cr"><b>Creatinina (mg/dl)</b></label>
+                <input type="number" aria-required="true" min="0" placeholder="creatinina" id="cr">
+                <label for="idade"><b>Idade (anos)</b></label>
+                <input type="number" aria-required="true" min="0" placeholder="idade" id="idade">
+                <label for="a1"> <b>Relação Albumina/Creatinina</b></label>
+                <input type="number" placeholder="mg/g" name="raça" id="a1">
+                <label for="h"><b>Sexo</b></label>
+                <input type="radio" name="sexo" id="h" value="h" checked>Masculino
+                <input type="radio" name="sexo" id="m" value="m">Feminino
+                
+                <br>
+                <button onclick="calcularckd()">Calcular</button>
+                <button onclick="limpara()" class="reseta">Limpar</button>
+                
+                <h5 id="output">Resultado</h5>
+            </div>
+            
+            <div class="clear cg">
+                <h3>COCKCROFT-GAULT</h3>
+                <p>(Indicada para pacientes internados)</p><br>
+                <label for="crg"><b>Creatinina (mg/dl)</b></label>
+                <input type="number" aria-required="true" min="0" placeholder="creatinina" id="crg">
+                <label for="pesog"><b>Peso (kg)</b></label>
+                <input type="number" aria-required="true" min="0" placeholder="peso" id="pesog">
+                <label for="idadeg"><b>Idade (anos)</b></label>
+                <input type="number" aria-required="true" min="0" placeholder="idade" id="idadeg">
+                <label for="hg"><b>Sexo</b></label>
+                <input type="radio" name="sexog" id="hg" value="hg" checked>Masculino
+                <input type="radio" name="sexog" id="mg" value="mg">Feminino <br>
+                <button onclick="calcularcft()">Calcular</button>
+                <button onclick="limparb()" class="reseta">Limpar</button>
+                <h5 id="saida">Resultado</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="./assets/js/main.js"></script>

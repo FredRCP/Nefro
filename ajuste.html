@@ -1,0 +1,26 @@
+<section id="ajuste">
+    <div class="barra"></div><br>
+    <div class="lado">
+        <h1></h1>
+        <div class="ajuste">
+            <h1>Ajuste de Medicamentos</h1>
+            <div>
+            <form autocomplete="on" class="campo" action="#">
+                <label for="atb">Medicamento</label>
+                <input class="azul atb" autocomplete="on" type="text" placeholder="medicamento" name="atb" id="atb">
+                <label for="nclcr">Clearance de Creatinina</label>
+                <input class="azul" type="number" min="0" placeholder="ml/min" name="nclcr" id="nclcr">
+                <br>              
+                <button class="campo1" onclick="ajuste()">Ajustar</button>
+                <button onclick="limparc()" class="limparc reseta">Limpar</button>
+                <button class="campo3" onclick="inf()">Sobre</button><br><br>
+            </form>
+            
+            </div>
+            <h5 id="ajust">Resultado</h5>
+            
+        </div>
+    </div>
+</section>
+
+<script src="./assets/js/main.js"></script>
