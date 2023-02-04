@@ -21,6 +21,12 @@ section{
     color: darkblue;
 }
 
+#intro{
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
 section button{
     background-color: darkblue;
     border-radius: 0.2rem;
