@@ -139,7 +139,12 @@ function calcularckd(){
         case "amicacina": if(clcr>50){dose="7,5mg/kg de 12/12h EV/IM"} else if(clcr<=50&&clcr>=10){dose="7,5mg/kg a cada 24h"} else if(clcr<10)
         {dose="7,5mg/kg a cada 48h; se estiver em HD fazer dose extra de 3,25mg/kg após; se HD contínua, 7,5mg/kg 24/24h"}    
         break;
+        case "amoxacilina": if(clcr>50){dose="500mg de 8/8h"} else if(clcr<=50&&clcr>=10){dose="250 a 500mg de 12/12h"} else if(clcr<10){dose="250 a 500mg a cada 24h"} 
+        break;
         case "amoxicilina": if(clcr>50){dose="500mg de 8/8h"} else if(clcr<=50&&clcr>=10){dose="250 a 500mg de 12/12h"} else if(clcr<10){dose="250 a 500mg a cada 24h"} 
+        break;
+        case "amoxacilina-clavulanato": if(clcr>50){dose="500/125mg de 8/8h"} else if(clcr<=50&&clcr>=10){dose="250 a 500/125mg de 12/12h"} 
+        else if(clcr<10){dose="250 a 500/125mg a cada 24h"} 
         break;
         case "amoxicilina-clavulanato": if(clcr>50){dose="500/125mg de 8/8h"} else if(clcr<=50&&clcr>=10){dose="250 a 500/125mg de 12/12h"} 
         else if(clcr<10){dose="250 a 500/125mg a cada 24h"} 
@@ -462,6 +467,8 @@ function calcularckd(){
         else if(clcr<=30){dose="5 a 10mg ao dia, usar com cautela"}
         break;
         case "sinvastatina": if(clcr>=10){dose="5 a 80mg ao dia"} else{dose="10mg ao dia, doses até 40mg/dia tem sido utilizadas por alguns autores."}
+        break;
+        case "trayenta": dose="5mg ao dia, não precisa de ajuste"
         break;
         case "xarelto": if(clcr>50){dose="Dose habitual"} else if(clcr<=50&&clcr>=30){dose="15mg ao dia; se uso para TVP/TEP, 15mg 12/12h por 3 semanas e após 15-20mg/dia"}
         else if(clcr<30&&clcr>15){dose="15mg ao dia, usar com cautela; se uso para TVP/TEP, 15mg 12/12h por 3 semanas e após 15-20mg/dia"} else{dose="Evitar"}
