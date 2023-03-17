@@ -52,7 +52,7 @@ aside{
     position: fixed;
     width: 100%;
     background-color:rgb(1, 1, 90);
-    min-height: 3rem;   
+    min-height: 2.5rem;   
 }
 
 section h1{
@@ -63,22 +63,27 @@ section h1{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    top: 0%;
+    left: 0%;
+    right: 0%;
     align-items: center;
     margin: 0 auto;
     height: auto;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: whitesmoke;
     max-width: 90%;
-    padding: 1rem 1rem;
+    padding: 0.6rem 0.6rem;
 }
-
-
 
 .menu nav ul{
     list-style: none;
     display: flex;
-    flex-flow: row wrap;
-    gap: 2rem;    
+    flex-flow: row wrap; 
+    font-size: 1.8rem;  
+}
+
+.menu nav ul li img{
+    margin-left: 1rem;
 }
 
 .menu nav ul li a{
@@ -86,27 +91,29 @@ section h1{
     color: whitesmoke;
     display: block;
     position: relative;
+    transition: all 400ms ease-in-out;
+    padding: 0.2rem 1rem;
 }
 
 .menu nav ul li a::after{
-    content: " ";
+    content: "";
     background-color: whitesmoke;
     width: 0%;
-    height: 0.1rem;
+    height: 0rem;
     bottom: 0;
     left: 50%;
     position: absolute;
     transition: all 400ms ease-in-out;
+    
 }
 
 .menu nav ul li a:hover::after{
-    content: " ";
+    content: "";
     background-color: whitesmoke;
     width: 100%;
     left: 0%;
-    height: 0.1rem;
+    height: 0.2rem;
     bottom: 0;
-    position: absolute;
 }
 
 .res:hover{
@@ -137,8 +144,8 @@ section h1{
 .clcr1{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 2rem 5rem;
-    gap: 2rem;
+    padding: 2rem 2rem;
+    gap: 5rem;
 }
 
 .clcr1 div{
@@ -163,6 +170,7 @@ section h1{
 .clcr div button{
     margin-top: 1rem;
     margin-bottom: 1rem;
+    cursor: pointer;
 }
 
 .clcr input:focus{
@@ -219,6 +227,7 @@ section h1{
 .lado{
     display: grid;
     grid-template-columns: 320px 1fr;
+    margin-top: 10rem;
 }
 
 .ajuste div{
@@ -242,6 +251,7 @@ section h1{
 
 .ajuste button{
     margin-top: 1rem;
+    cursor: pointer;
 }
 
 
@@ -393,6 +403,7 @@ section h1{
 @media(max-width:1366px){
     .clcr{
         margin-top: 0rem;  
+        font-size: 1rem;
     }
     
     .clcr h1{
