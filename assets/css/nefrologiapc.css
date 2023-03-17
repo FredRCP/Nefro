@@ -25,18 +25,18 @@ section{
     align-items: center;
     justify-content: center;
     font-size: 2rem;
-    background-image: url('/assets/image/RIM2.jpg');
-    background-size: contain;
+    background-image: url('/assets/image/poligonos3.avif');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 #intro h4{
-    margin-top: 30rem;
+    color: rgb(1, 1, 90);
 }
 
 section button{
-    background-color: darkblue;
+    background-color: rgb(1, 1, 90);
     border-radius: 0.2rem;
     color: whitesmoke;
     padding: 0.2rem 0.4rem;
@@ -143,14 +143,14 @@ section h1{
 
 .clcr1 div{
     text-align-last: center;
-    border: 0.2rem solid darkblue;
+    border: 0.2rem solid rgb(1, 1, 90);
     padding: 2rem 1rem;
     border-radius: 5%;
 }
 
 .ajuste div{
     text-align-last: center;
-    border: 0rem solid darkblue;
+    border: 0rem solid rgb(1, 1, 90);
     padding: 3rem 3rem;
     border-radius: 30%;
 }
@@ -166,8 +166,8 @@ section h1{
 }
 
 .clcr input:focus{
-    color: darkblue;
-    outline-color: darkblue;    
+    color: rgb(1, 1, 90);
+    outline-color: rgb(1, 1, 90);    
 }
 
 .clear{
@@ -207,7 +207,7 @@ section h1{
 
 }
 .ajuste form:hover{
-    border: 0.4rem solid darkblue;
+    border: 0.4rem solid rgb(1, 1, 90);
     background-color: rgba(141, 141, 221, 0.575);
 }
 
@@ -236,8 +236,8 @@ section h1{
 }
 
 .ajuste input:focus{
-    color: darkblue;
-    outline-color: darkblue;
+    color: rgb(1, 1, 90);
+    outline-color: rgb(1, 1, 90);
 }
 
 .ajuste button{
@@ -254,7 +254,7 @@ section h1{
 
 .form div{
     text-align-last: center;
-    border: 0.2rem solid darkblue;
+    border: 0.2rem solid rgb(1, 1, 90);
     padding: 2rem 1rem 4rem 1rem;
     text-align: justify;
 }
@@ -274,8 +274,8 @@ section h1{
 }
 
 .form input:focus{
-    color: darkblue;
-    outline-color: darkblue;
+    color: rgb(1, 1, 90);
+    outline-color: rgb(1, 1, 90);
 }
 
 .form button{
@@ -303,7 +303,7 @@ section h1{
 
 #outros h3 a{
     text-decoration-line: none;
-    color: rgb(3, 3, 77);
+    color: rgb(1, 1, 90);
     display: block;
     position: relative;
     gap: 2rem;
@@ -313,7 +313,7 @@ section h1{
 
 #outros h3 a::after{
     content: " ";
-    background-color: rgb(3, 3, 77);
+    background-color: rgb(1, 1, 90);
     width: 0;
     height: 0.1rem;
     bottom: 0;
@@ -324,7 +324,7 @@ section h1{
 
 #outros h3 a:hover::after{
     content: " ";
-    background-color: rgb(3, 3, 77);
+    background-color: rgb(1, 1, 90);
     width: 0;
     left: 0%;
     height: 0.1rem;
@@ -374,7 +374,7 @@ section h1{
   }
 
 .azul{
-    color: darkblue;
+    color: rgb(1, 1, 90);
 }
 
 .lin{
@@ -434,23 +434,16 @@ section h1{
         flex-direction: column;
         justify-content: center;
         height: 90vh;
-        color: darkblue;
         font-size: 2.0rem;
         margin-bottom: 50rem;
     }
     .menu nav ul{
         flex-direction: column;
         align-items: center;
-        color: darkblue;
         
     }
 
-    .menu nav ul li a{
-        color: darkblue;
-    }
-
     .menu nav ul li img{
-        background-color: darkblue;
         border-radius: 50%;
     }
 
@@ -458,9 +451,6 @@ section h1{
         height: 2.8rem;
     }
 
-    .menu nav ul li a:hover:after{
-        background-color: darkblue;
-    }
     aside{
         display: none;
         background-color: whitesmoke;   
@@ -479,7 +469,7 @@ section h1{
         z-index: 2;
         top: 2rem;
         right: 2rem;
-        background-color: darkblue;
+        background-color: rgb(1, 1, 90);
         color: white;
         font-size: 5rem;
         line-height: 3rem;
