@@ -52,7 +52,8 @@ aside{
     position: fixed;
     width: 100%;
     background-color:rgb(1, 1, 90);
-    min-height: 2.5rem;   
+    min-height: 2.5rem; 
+    border: solid 0.15rem gray;  
 }
 
 section h1{
