@@ -60,6 +60,18 @@ aside{
     z-index: 15;
 }
 
+.rcphealth{
+    position: fixed;
+    bottom: 2rem;
+    right: 3rem;
+    width: 4rem;
+    transition: all 500ms ease-in-out;
+}
+
+.rcphealth:hover{
+    transform: scale(1.1);
+}
+
 section h1{
     margin-top: 1rem;
 }
@@ -242,7 +254,7 @@ section h1{
     background-color: rgba(141, 141, 221, 0.575);
 }
 
-.ajuste h5{
+.ajuste h4{
     align-items: center;
     text-align: center;
 }
