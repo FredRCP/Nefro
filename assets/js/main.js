@@ -78,7 +78,7 @@ function calcularckd(){
         var sexo= document.querySelector('input[name="sexog"]:checked').value
         var clcr= (140-idade)*peso/(cr*72)
         clcr= clcr.toFixed(2)
-        if(isNaN(cr) || isNaN(idade) || isNaN(peso)){ return document.querySelector("#saida").innerHTML="preencha todos os dados acima"}
+        if(isNaN(cr) || isNaN(idade) || isNaN(peso)){ return document.querySelector("#output").innerHTML="preencha todos os dados acima"}
         switch(sexo){
             case "hg": var cf=clcr
                 break
@@ -90,7 +90,7 @@ function calcularckd(){
         if(cf>=60){resultado="ClCr estimado: "+cf + " ml/min/1,73m2"}
             else{resultado="ClCr estimado: "+cf + " ml/min/1,73m2." +
                 " Sugiro avaliação de um nefrologista!"}
-        document.querySelector("#saida").innerHTML=resultado    
+        document.querySelector("#output").innerHTML=resultado    
     }
 
     //EVENTOS DE CLICAR
@@ -503,7 +503,7 @@ function calcularckd(){
         document.querySelector("#crg").value=""
         document.querySelector("#idadeg").value=""
         document.querySelector("#pesog").value=""
-        document.querySelector("#saida").innerHTML=""
+        document.querySelector("#output").innerHTML=""
 
     }
 
