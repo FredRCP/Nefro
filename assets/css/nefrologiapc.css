@@ -277,19 +277,6 @@ section h1{
     width: 500px; 
 }
 
-.rimadireita{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    height: 96vh;  
-    width: 500px;
-}
-
-/*.ajuste div:hover{
-    background-color: rgba(231, 162, 145, 0.507) ;     
-}
-*/
-
 .ajuste label{
     padding: 0.3rem;
     margin-top: 0;
@@ -304,7 +291,6 @@ section h1{
     margin-top: 1rem;
     cursor: pointer;
 }
-
 
 .form{
     display: grid;
@@ -352,85 +338,6 @@ section h1{
     text-align:initial;  
 }
 
-
-.outros{
-    background-image: 
-    url(./image/card.JPG);
-    background-size: 600px 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-}
-
-#outros h3 a{
-    text-decoration-line: none;
-    color: rgb(1, 1, 90);
-    display: block;
-    position: relative;
-    gap: 2rem;
-    margin-top: 5rem;   
-    
-}
-
-#outros h3 a::after{
-    content: " ";
-    background-color: rgb(1, 1, 90);
-    width: 0;
-    height: 0.1rem;
-    bottom: 0;
-    left: 50%;
-    position: absolute;
-    transition: all 500ms ease-in-out;
-}
-
-#outros h3 a:hover::after{
-    content: " ";
-    background-color: rgb(1, 1, 90);
-    width: 0;
-    left: 0%;
-    height: 0.1rem;
-    bottom: 0;
-    position: absolute;   
-}
-
-.ima{  
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    width: auto;
-    color: rgba(176, 30, 30, 0);
-    transition: all 500ms ease-in-out; 
-    bottom: 1rem;
-    left: 50%;
-    right: 50%;
-    margin: 0 auto;
-}
-
-.imagem{
-    width: 3rem;   
-}
-
-
-.imagem:hover{
-   
-    transition: all 800ms ease-in-out;
-    animation: pulse 2.5s ease 0s infinite;
-}
-
-@keyframes pulse {
-    0% {
-        opacity: 1;
-        transform: scale(1);
-    }
-    
-    100% {
-        opacity: 1;
-        transform: scale(1.2);
-    }
-  }
-
 .azul{
     color: rgb(1, 1, 90);
 }
@@ -449,13 +356,46 @@ section h1{
 }
 
 @media(max-width:1366px){
+
+    .rcphealth{
+        bottom: 1.5rem;
+    }
+
+    aside{
+        min-height: 2rem;
+    }
+
+    .menu{
+        font-size: 1.3rem;
+        padding: 0.6rem 0.6rem;
+    }
+    
+    .menu nav ul{
+        font-size: 1.3rem;  
+    }
+
     .clcr{
         margin-top: 0rem;  
         font-size: 1rem;
     }
     
     .clcr h1{
-        margin-bottom: 0rem;
+        margin-bottom: 2rem;
+        font-size: 1.4rem;
+    }
+    
+    .clcr h4{
+        margin-top: 3rem;
+        font-size: 1.2rem;
+    }
+    
+    .clcr1{
+        grid-template-columns: 1fr 120px 1fr;
+    }
+
+    .filtracaosem{
+        width: 80px;
+        height: 100px;
     }
 
     .rimazul{
@@ -477,8 +417,18 @@ section h1{
     .lado{
         padding: 0;
         max-height: 80vh;
-        margin-top: -4rem;
+        margin-top: 0rem;
         gap: 0;
+    }
+
+    .rimaesquerda{
+        width: 360px;
+    }
+
+    .ajuste{
+        margin-right: 8rem; 
+        margin-top: 3rem;
+        font-size: 1.2rem;       
     }
 
     #ajust{
@@ -488,6 +438,10 @@ section h1{
     .campo{
         gap: 0;
         margin-top: 0rem;
+    }
+
+    .res{
+        height: 1.8rem;
     }
 }
 
