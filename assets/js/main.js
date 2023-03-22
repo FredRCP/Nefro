@@ -154,15 +154,15 @@ function calcularckd(){
         case "amicacina": if(clcr>50){dose="7,5mg/kg de 12/12h EV/IM"} else if(clcr<=50&&clcr>=10){dose="7,5mg/kg a cada 24h"} else if(clcr<10)
         {dose="7,5mg/kg a cada 48h; se estiver em HD fazer dose extra de 3,25mg/kg após; se HD contínua, 7,5mg/kg 24/24h"}    
         break;
-        case "amoxacilina": if(clcr>50){dose="500mg de 8/8h"} else if(clcr<=50&&clcr>=10){dose="250 a 500mg de 12/12h"} else if(clcr<10){dose="250 a 500mg a cada 24h"} 
+        case "amoxacilina": if(clcr>50){dose="500mg de 8/8h, via oral"} else if(clcr<=50&&clcr>=10){dose="250 a 500mg de 12/12h, via oral"} else if(clcr<10){dose="250 a 500mg a cada 24h, via oral"} 
         break;
-        case "amoxicilina": if(clcr>50){dose="500mg de 8/8h"} else if(clcr<=50&&clcr>=10){dose="250 a 500mg de 12/12h"} else if(clcr<10){dose="250 a 500mg a cada 24h"} 
+        case "amoxicilina": if(clcr>50){dose="500mg de 8/8h, via oral"} else if(clcr<=50&&clcr>=10){dose="250 a 500mg de 12/12h, via oral"} else if(clcr<10){dose="250 a 500mg a cada 24h, via oral"} 
         break;
-        case "amoxacilina-clavulanato": if(clcr>50){dose="500/125mg de 8/8h"} else if(clcr<=50&&clcr>=10){dose="250 a 500/125mg de 12/12h"} 
-        else if(clcr<10){dose="250 a 500/125mg a cada 24h"} 
+        case "amoxacilina-clavulanato": if(clcr>50){dose="500/125mg de 8/8h, via oral"} else if(clcr<=50&&clcr>=10){dose="250 a 500/125mg de 12/12h, via oral"} 
+        else if(clcr<10){dose="250 a 500/125mg a cada 24h, via oral"} 
         break;
-        case "amoxicilina-clavulanato": if(clcr>50){dose="500/125mg de 8/8h"} else if(clcr<=50&&clcr>=10){dose="250 a 500/125mg de 12/12h"} 
-        else if(clcr<10){dose="250 a 500/125mg a cada 24h"} 
+        case "amoxicilina-clavulanato": if(clcr>50){dose="500/125mg de 8/8h, via oral"} else if(clcr<=50&&clcr>=10){dose="250 a 500/125mg de 12/12h, via oral"} 
+        else if(clcr<10){dose="250 a 500/125mg a cada 24h, via oral"} 
         break;
         case "ampicilina": if(clcr>20){dose="VENOSO: 0,5 a 2g de 6/6h; ORAL: 1g 6/6h"}
             else if(clcr<=20&&clcr>10){dose="VENOSO: 0,5 a 2g de 6/6h; ORAL: 1g 6/6h"}
@@ -174,7 +174,7 @@ function calcularckd(){
         break;
         case "azitromicina": dose="500mg a cada 24h, não precisa de correção para a função renal"
         break;
-        case "cefalexina": if(clcr>20){dose="500mg de 6/6h"} else{dose= "500mg de 8/8h a 12/12h"}
+        case "cefalexina": if(clcr>20){dose="500mg de 6/6h, via oral"} else{dose= "500mg de 8/8h a 12/12h, via oral"}
         break;
         case "cefazolina": if(clcr>50){dose="1 a 2g de 8/8h"} else if(clcr<=50&&clcr>=10){dose="1 a 2g de 12/12h"} else if(clcr<10){dose="1 a 2g a cada 24/48h"}
         break;    
