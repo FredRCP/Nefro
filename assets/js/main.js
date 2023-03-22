@@ -32,6 +32,8 @@ function carregar(response){
 //FUNÇÃO CKD EPI
 
 function calcularckd(){
+    document.querySelector('#output').classList.remove('vermelho');
+        document.querySelector('#output').classList.remove('amarelo');
     var cr= document.querySelector('#cr').value
     cr= parseFloat(cr)
     var idade=document.querySelector('#idade').value
@@ -62,13 +64,23 @@ function calcularckd(){
     if(clcr<15){resultado= 'Estágio G5' + alb+ '  da doença renal, níveis alarmantes, procure um Nefrologista urgente!'}
     
     document.querySelector('#output').innerHTML='O ClCr estimado é '+ clcr + 'ml/min/1,73m2. '+ "<p>"+ resultado
+    addclasse(clcr);
     document.getElementById('cr').focus();
+    }
+
+    //FUNÇÃO CORES
+
+    function addclasse(x){
+        const resultadocor= document.querySelector('#output');
+        if(x<60&&x>15){resultadocor.classList.add('amarelo')};
+        if(x<=15){resultadocor.classList.add('vermelho')};
     }
 
     //FUNÇÃO COCKCROFT GAULT
 
     function calcularcft(){
-        
+        document.querySelector('#output').classList.remove('vermelho');
+        document.querySelector('#output').classList.remove('amarelo');
         var cr=document.querySelector("#crg").value
         cr=parseFloat(cr)
         var idade=document.querySelector("#idadeg").value
@@ -88,8 +100,9 @@ function calcularckd(){
     
         var resultado=""    
         if(cf>=60){resultado="ClCr estimado: "+cf + " ml/min/1,73m2"}
-            else{resultado="ClCr estimado: "+cf + " ml/min/1,73m2." +
-                " Sugiro avaliação de um nefrologista!"}
+        else{resultado="ClCr estimado: "+cf + " ml/min/1,73m2." +
+                " Recomendado avaliação de um nefrologista!"}
+        addclasse(cf);
         document.querySelector("#output").innerHTML=resultado    
     }
 
