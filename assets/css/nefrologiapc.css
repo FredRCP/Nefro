@@ -65,7 +65,7 @@ aside{
     bottom: 2rem;
     right: 3rem;
     width: 4rem;
-    transition: all 500ms ease-in-out;
+    transition: all 700ms ease-in-out;
 }
 
 .rcphealth:hover{
@@ -372,6 +372,10 @@ section h1{
     
     .menu nav ul{
         font-size: 1.3rem;  
+    }
+
+    .menu nav ul li a{
+        padding: 0.2rem 0.6rem;
     }
 
     .clcr{
