@@ -167,14 +167,14 @@ section h1{
 
 .clcr1{
     display: grid;
-    grid-template-columns: 1fr 180px 1fr;
+    grid-template-columns: 1fr 160px 1fr;
     padding: 1rem 0rem;
     gap: 0rem;
 }
 
 .filtracaosem{
-    width: 160px;
-    height: 200px;
+    width: 120px;
+    height: 150px;
 }
 
 .clcr1 div{
