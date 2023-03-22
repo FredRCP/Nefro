@@ -31,7 +31,7 @@ section{
     background-repeat: repeat;
 }
 
-#intro h4{
+#intro h4:not(#output){
     color: rgb(1, 1, 90);
 }
 
@@ -165,8 +165,8 @@ section h1{
     text-align: center;
 }
 
-#output{
-    color: green;
+.azul{
+    color: darkblue;
 }
 
 .clcr1{
@@ -228,13 +228,11 @@ section h1{
 }
 
 .amarelo{
-    color: yellow;
-    background-color: yellow;
+    color: darkgoldenrod;
 }
 
 .vermelho{
     color: red;
-    background-color: red;
 }
 
 

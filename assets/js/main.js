@@ -33,7 +33,8 @@ function carregar(response){
 
 function calcularckd(){
     document.querySelector('#output').classList.remove('vermelho');
-        document.querySelector('#output').classList.remove('amarelo');
+    document.querySelector('#output').classList.remove('amarelo');
+    document.querySelector('#output').classList.add('azul');
     var cr= document.querySelector('#cr').value
     cr= parseFloat(cr)
     var idade=document.querySelector('#idade').value
@@ -72,8 +73,8 @@ function calcularckd(){
 
     function addclasse(x){
         const resultadocor= document.querySelector('#output');
-        if(x<60&&x>15){resultadocor.classList.add('amarelo')};
-        if(x<=15){resultadocor.classList.add('vermelho')};
+        if(x<60&&x>15){resultadocor.classList.add('amarelo'); resultadocor.classList.remove('azul')};
+        if(x<=15){resultadocor.classList.add('vermelho'); resultadocor.classList.remove('azul')};
     }
 
     //FUNÇÃO COCKCROFT GAULT
@@ -81,6 +82,7 @@ function calcularckd(){
     function calcularcft(){
         document.querySelector('#output').classList.remove('vermelho');
         document.querySelector('#output').classList.remove('amarelo');
+        document.querySelector('#output').classList.add('azul');
         var cr=document.querySelector("#crg").value
         cr=parseFloat(cr)
         var idade=document.querySelector("#idadeg").value
