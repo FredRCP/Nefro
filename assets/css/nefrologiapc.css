@@ -367,6 +367,62 @@ section h1{
     height: 2rem;
 }
 
+@media(max-width:1600px){
+    .rimazul{
+        width: 500px;
+    }
+
+    #intro h4{
+        font-size: 1.6rem;
+    }
+
+    .clcr{
+        margin-top: 2.8rem;  
+        font-size: 1.2rem;
+    }
+    
+    .clcr h1{
+        margin-bottom: 2.2rem;
+        font-size: 1.8rem;
+    }
+    
+    .clcr h4{
+        margin-top: 2.4rem;
+        font-size: 0.8rem;
+    }
+
+    .filtracaosem{
+        width: 100px;
+        height: 120px;
+    }
+  
+      #ajuste h1{
+          margin-bottom: 0rem;
+      }
+
+  
+      .lado{
+          padding: 0;
+          max-height: 80vh;
+          margin-top: 1rem;
+      }
+  
+      .rimaesquerda{
+          width: 400px;
+      }
+  
+      .ajuste{
+          margin-right: 8rem; 
+          margin-top: 3rem;
+          font-size: 1.4rem;       
+      }
+
+      .rcphealth{
+        right: 1.5rem;
+        bottom: 1.5rem;
+    }
+}
+
 @media(max-width:1366px){
 
     .rcphealth{
