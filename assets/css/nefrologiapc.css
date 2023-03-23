@@ -470,10 +470,13 @@ section h1{
     aside{
         bottom: 1.5rem;
         top: 1.5rem;
-        left: 0.8rem;  
+        left: 0.5rem; 
+        margin: 0 auto;
+        right: 0.5rem; 
+        align-items: center;
         justify-content: center;   
         max-width: 100vw; 
-        max-height: 100vh;   
+        max-height: 90vh;   
     }
 
     .rcphealth{
@@ -484,8 +487,7 @@ section h1{
     #intro{
         font-size: 1.5rem;
         height: 100vh;
-        overflow: hidden;
-        
+        overflow: hidden;  
     }
 
     .rimazul{
@@ -565,14 +567,14 @@ section h1{
 
     .close:checked~aside{
         display: block;
-        width: 320px;
-        height: 360px;
+        width: 90vw;
+        height: 400px;
         background-color: whitesmoke;
         border: solid 0.2rem rgb(1, 1, 90);  
     }
 
     .close:checked~aside .menu{
-        width: 320px;
+        width: 90vw;
         height: 352px;
     }
 
