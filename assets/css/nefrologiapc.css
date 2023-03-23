@@ -57,7 +57,7 @@ aside{
     background-color:rgb(1, 1, 90);
     min-height: 2.5rem; 
     border: solid 0.15rem gray;  
-    z-index: 15;
+    z-index: 4;
 }
 
 .rcphealth{
@@ -396,13 +396,13 @@ section h1{
     }
     
     .clcr h1{
-        margin-bottom: 2rem;
-        font-size: 1.4rem;
+        margin-bottom: 1.8rem;
+        font-size: 1.3rem;
     }
     
     .clcr h4{
-        margin-top: 3rem;
-        font-size: 1.2rem;
+        margin-top: 2.2rem;
+        font-size: 1.1rem;
     }
     
     .clcr1{
@@ -493,7 +493,7 @@ section h1{
     }
 
     .menu{
-        gap: 2rem;
+        gap: 1rem;
         flex-direction: column;
         justify-content: center;
         height: 90vh;
@@ -510,9 +510,9 @@ section h1{
     }
 
     .menu nav ul li{
-        padding: 1.4rem 0;
-        font-weight: 500;
-        font-size: 1.5rem;
+        padding: 1rem 0;
+        font-weight: 600;
+        font-size: 1.4rem;
     }
 
     .menu nav ul li img{
@@ -524,13 +524,14 @@ section h1{
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        height: 1.8rem;
-        width: 1.8rem;
+        height: 2rem;
+        width: 2rem;
+        margin-top: 1.2rem;
+        
     }
 
     .res{
-        height: 0.2rem;
-        
+        height: 0.2rem;  
     }
 
     aside{
@@ -540,7 +541,7 @@ section h1{
 
     .close{
         position: fixed;
-        z-index: 2;
+        z-index: 5;
         top: 0;
         left: 0;  
     }
@@ -548,17 +549,17 @@ section h1{
     .closelabel::after{
         content: "≡";
         position: fixed;
-        z-index: 2;
+        z-index: 5;
         top: 1.5rem;
         right: 1.5rem;
         background-color: rgb(1, 1, 90);
         color: white;
-        font-size: 4rem;
-        line-height: 2.2rem;
+        font-size: 3.2rem;
+        line-height: 2.1rem;
         height: 2.2rem;
-        width: 2.2rem;
+        width: 2rem;
         text-align: center;
-        padding: 0.5rem;
+        padding: 0.2rem;
         cursor: pointer;
     }
 
@@ -596,14 +597,16 @@ section h1{
         flex-direction: column;
         height: 80vh;
         width: 100vw;
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
-
 
     .ajuste button{
         font-size: 0.7rem;
     }
 
+    .ajuste h4{
+        font-size: 1rem;
+    }
 
     .lado{
         align-items: center;
@@ -612,50 +615,7 @@ section h1{
         flex-flow: column wrap;
         height: 100vh;
         width: 100vw;
-        margin: 10rem auto;      
-    }
-
-}
-
-
-
-
-
-
-
-@media(max-width: 420px) {
-    .ajuste{
         max-width: 420px;
-        align-items: center;
-        justify-items: center;
-        font-size: 1.2rem;
-        margin-top: -4rem;
+        margin-top: 2rem;      
     }
-
-    #ajust{
-        max-width: 300px;
-        margin-top: -1rem;
-        font-size: 0.8rem;
-    }
-}
-
-@media(max-width: 320px){
-    .ajuste{
-        max-width: 300px;
-        align-items: center;
-        justify-items: center;
-        font-size: 1.0rem;
-        margin-top: -4rem;
-    }
-
-    #ajust{
-        max-width: 260px;
-        margin-top: -1rem;
-        font-size: 0.8rem;
-    }
-
-    #intro{
-        font-size: 1.4rem;
-    }
-
 }
