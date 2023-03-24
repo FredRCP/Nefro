@@ -380,6 +380,10 @@ section h1{
         margin-top: 2.8rem;  
         font-size: 1.2rem;
     }
+
+    .clcr1{
+        grid-template-columns: 1fr 140px 1fr;
+    }
     
     .clcr h1{
         margin-bottom: 2.2rem;
@@ -659,11 +663,19 @@ section h1{
     }
 
     .ajuste button{
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
 
     .ajuste h4{
-        font-size: 1rem;
+        font-size: 0.6rem;
+    }
+
+    .ajuste form label{ 
+        font-size: 0.8rem;
+    }
+
+    .ajuste form button{
+        padding: 0.3rem;
     }
 
     .lado{
