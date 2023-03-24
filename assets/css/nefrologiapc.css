@@ -688,4 +688,17 @@ section h1{
         max-width: 420px;
         margin-top: 2rem;      
     }
+
+    .clcr h1{
+        margin-top: 8rem;
+    }
+
+    .clcr1{
+        grid-template-columns: 1fr 5px 1fr;
+    }
+
+    .clcr1 img{
+        width: 0rem;
+        height: 0rem;
+    }
 }
