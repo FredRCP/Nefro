@@ -594,7 +594,8 @@ section h1{
     }
 
     .res{
-        height: 0.2rem;  
+        height: 1rem;
+        padding: 1rem;  
     }
 
     aside{
