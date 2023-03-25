@@ -456,22 +456,25 @@ section h1{
     }
     
     .clcr h1{
-        margin-bottom: 1.8rem;
-        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+        font-size: 1.4rem;
     }
-    
-    .clcr h4{
-        margin-top: 2.2rem;
+
+    #clcr h4{
         font-size: 1.1rem;
     }
     
+    .clcr h4{
+        margin-top: 1rem;
+    }
+    
     .clcr1{
-        grid-template-columns: 1fr 120px 1fr;
+        grid-template-columns: 1fr 100px 1fr;
     }
 
     .filtracaosem{
-        width: 80px;
-        height: 100px;
+        width: 70px;
+        height: 90px;
     }
 
     .rimazul{
@@ -486,6 +489,10 @@ section h1{
         margin-bottom: -2rem;
     }
 
+    #ajuste h4{
+        font-size: 1.1rem;
+    }
+
     #intro{
         font-size: 1.8rem;
     }
@@ -493,7 +500,7 @@ section h1{
     .lado{
         padding: 0;
         max-height: 80vh;
-        margin-top: 0rem;
+        margin-top: -2rem;
         gap: 0;
     }
 

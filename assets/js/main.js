@@ -62,7 +62,7 @@ function calcularckd(){
     if(clcr<60&&clcr>=45){resultado= 'Estágio G3a' + alb+ '  da doença renal, recomendada avaliação de um Nefrologista.'}
     if(clcr<45&&clcr>=30){resultado= 'Estágio G3b' + alb+ '  da doença renal, recomendado acompanhamento com Nefrologista.'}
     if(clcr<30&&clcr>=15){resultado= 'Estágio G4' + alb+ '  da doença renal, recomendado acompanhamento com Nefrologista.'}
-    if(clcr<15){resultado= 'Estágio G5' + alb+ '  da doença renal, níveis alarmantes, procure um Nefrologista urgente!'}
+    if(clcr<15){resultado= 'Estágio G5' + alb+ '  da doença renal, níveis alarmantes, procure um Nefrologista com urgência!'}
     
     document.querySelector('#output').innerHTML='O ClCr estimado é '+ clcr + 'ml/min/1,73m2. '+ "<p>"+ resultado
     addclasse(clcr);
@@ -103,7 +103,7 @@ function calcularckd(){
         var resultado=""    
         if(cf>=60){resultado="ClCr estimado: "+cf + " ml/min/1,73m2"}
         else{resultado="ClCr estimado: "+cf + " ml/min/1,73m2." +
-                " Recomendado avaliação de um nefrologista!"}
+                " Recomendada a avaliação de um nefrologista!"}
         addclasse(cf);
         document.querySelector("#output").innerHTML=resultado    
     }
@@ -136,7 +136,7 @@ function calcularckd(){
     function ajuste(){
     
     let medicamento= document.querySelector("#atb").value;
-    medicamento= medicamento.toLowerCase();
+    medicamento= medicamento.toLowerCase().trim();
     let clcr=document.querySelector("#nclcr").value;
     clcr= parseFloat(clcr)
     let dose;
