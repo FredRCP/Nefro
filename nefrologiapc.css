@@ -1,0 +1,722 @@
+*{
+    font-size: 62,5%;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+section{
+    min-height: 100vh;
+    display: flex;
+    width: 100vw;
+    flex-flow: column wrap;
+    font-size: 1.2rem;
+    align-items: center;
+    padding: 0rem;
+    color: darkblue;
+}
+
+#intro{
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background-image: url('/assets/image/poligonos3.avif');
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+#intro h4:not(#output){
+    color: rgb(1, 1, 90);
+}
+
+section button{
+    background-color: rgb(1, 1, 90);
+    border-radius: 0.2rem;
+    color: whitesmoke;
+    padding: 0.2rem 0.4rem;
+}
+
+.rimazul{
+    width: 640px;
+}
+
+.barra{
+    height: 4rem;
+    width: 100%;
+}
+
+aside{
+    position: fixed;
+    width: 100%;
+    background-color:rgb(1, 1, 90);
+    min-height: 2.5rem; 
+    border: solid 0.15rem gray;  
+    z-index: 4;
+}
+
+.rcphealth{
+    position: fixed;
+    bottom: 2rem;
+    right: 3rem;
+    width: 4rem;
+    transition: all 700ms ease-in-out;
+}
+
+.rcphealth:hover{
+    transform: scale(1.1);
+}
+
+section h1{
+    margin-top: 1rem;
+}
+
+.menu{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    align-items: center;
+    margin: 0 auto;
+    height: auto;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    max-width: 90%;
+    padding: 0.6rem 0.6rem;
+}
+
+.menu nav ul{
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap; 
+    font-size: 1.8rem;  
+}
+
+.menu nav ul li img{
+    margin-left: 1rem;
+}
+
+.menu nav ul li a{
+    text-decoration-line: none;
+    color: whitesmoke;
+    display: block;
+    position: relative;
+    transition: all 400ms ease-in-out;
+    padding: 0.2rem 1rem;
+}
+
+.menu nav ul li a::after{
+    content: "";
+    background-color: whitesmoke;
+    width: 0%;
+    height: 0rem;
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    transition: all 400ms ease-in-out;
+    
+}
+
+.menu nav ul li a:hover::after{
+    content: "";
+    background-color: whitesmoke;
+    width: 100%;
+    left: 0%;
+    height: 0.2rem;
+    bottom: 0;
+}
+
+.res:hover{
+    transform: rotate(-360deg);
+    transition: 1500ms ease-in-out; 
+}
+
+
+#clcr{
+    background-image:  
+    url("/assets/image/poligonos3.avif");
+    background-size: contain;
+    background-position: center;  
+}
+
+.clcr{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;  
+    margin-top: 4rem;  
+}
+
+.clcr h1{
+    margin-bottom: 4rem;
+    font-size: 1.8rem;
+}
+
+.clcr h4{
+    margin-top: 4rem;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.azul{
+    color: darkblue;
+}
+
+.clcr1{
+    display: grid;
+    grid-template-columns: 1fr 160px 1fr;
+    padding: 1rem 0rem;
+    gap: 0rem;
+}
+
+.filtracaosem{
+    width: 120px;
+    height: 150px;
+}
+
+.clcr1 div{
+    text-align-last: center;
+    border: 0.2rem solid rgb(1, 1, 90);
+    padding: 1rem 1rem;
+    border-radius: 5%;
+}
+
+.clcr1 p{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.ajuste div{
+    text-align-last: center;
+    border: 0rem solid rgb(1, 1, 90);
+    padding: 3rem 3rem;
+    border-radius: 30%;
+}
+
+
+.clcr1 div label, .ajuste div label{
+    display: block;
+}
+
+.clcr div button{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.clcr input:focus{
+    color: rgb(1, 1, 90);
+    outline-color: rgb(1, 1, 90);    
+}
+
+.clear{
+    transition: all 300ms ease-in-out;
+}
+
+.clear:hover{
+    background-color: rgba(141, 141, 221, 0.575);
+    border: 0.2rem solid rgba(0, 0, 139, 0.144);
+    border-radius: 5%;
+}
+
+.amarelo{
+    color: rgb(245, 182, 25);
+}
+
+.vermelho{
+    color: red;
+}
+
+
+#ajuste{
+    background-color: whitesmoke;
+    background-image: 
+    url("/assets/image/poligonos3.avif");
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;  
+}
+
+.ajuste{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.4rem;
+}
+
+.ajuste form{
+    transition: all 300ms ease-in-out;
+    border-radius: 1rem;  
+    border: 0.4rem solid rgba(0, 0, 139, 0);
+    padding: 2rem;
+
+}
+.ajuste form:hover{
+    border: 0.4rem solid rgb(1, 1, 90);
+    background-color: rgba(141, 141, 221, 0.575);
+}
+
+.ajuste h4{
+    align-items: center;
+    text-align: center;
+}
+
+.lado{
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    margin-top: 8rem;
+}
+
+.ajuste div{
+    padding: 3rem 6rem;  
+}
+
+.rimaesquerda{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 96vh; 
+    width: 500px; 
+}
+
+.ajuste label{
+    padding: 0.3rem;
+    margin-top: 0;
+}
+
+.ajuste input:focus{
+    color: rgb(1, 1, 90);
+    outline-color: rgb(1, 1, 90);
+}
+
+.ajuste button{
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1rem 3rem;
+    gap: 2rem;
+}
+
+.form div{
+    text-align-last: center;
+    border: 0.2rem solid rgb(1, 1, 90);
+    padding: 2rem 1rem 4rem 1rem;
+    text-align: justify;
+}
+
+.form div label{
+    display: block;
+}
+
+
+.form div:hover{
+    background-color: rgba(176, 196, 222, 0.507) ;     
+}
+
+.form label{
+    padding: 0.1rem;
+    margin-top: 0;
+}
+
+.form input:focus{
+    color: rgb(1, 1, 90);
+    outline-color: rgb(1, 1, 90);
+}
+
+.form button{
+     margin-top: 1rem;
+     margin-bottom: 1rem;   
+}
+
+.form h3{
+    margin-bottom: 2rem;
+}
+
+.form .mass h5{
+    text-align:initial;  
+}
+
+.azul{
+    color: rgb(1, 1, 90);
+}
+
+.lin{
+    position: relative;
+    margin-bottom: 0;
+}
+
+.close{
+    display: none;
+}
+
+.res{
+    height: 2rem;
+}
+
+@media(max-width:1600px){
+    .rimazul{
+        width: 500px;
+    }
+
+    #intro h4{
+        font-size: 1.6rem;
+    }
+
+    .clcr{
+        margin-top: 2.8rem;  
+        font-size: 1.2rem;
+    }
+
+    .clcr1{
+        grid-template-columns: 1fr 140px 1fr;
+    }
+    
+    .clcr h1{
+        margin-bottom: 2.2rem;
+        font-size: 1.8rem;
+    }
+    
+    .clcr h4{
+        margin-top: 2.4rem;
+        font-size: 0.8rem;
+    }
+
+    .filtracaosem{
+        width: 100px;
+        height: 120px;
+    }
+  
+      #ajuste h1{
+          margin-bottom: 0rem;
+      }
+
+  
+      .lado{
+          padding: 0;
+          max-height: 80vh;
+          margin-top: 1rem;
+      }
+  
+      .rimaesquerda{
+          width: 400px;
+      }
+  
+      .ajuste{
+          margin-right: 8rem; 
+          margin-top: 3rem;
+          font-size: 1.4rem;       
+      }
+
+      .rcphealth{
+        right: 1.5rem;
+        bottom: 1.5rem;
+    }
+}
+
+@media(max-width:1366px){
+
+    .rcphealth{
+        bottom: 1.5rem;
+    }
+
+    aside{
+        min-height: 2rem;
+    }
+
+    .menu{
+        font-size: 1.3rem;
+        padding: 0.6rem 0.6rem;
+    }
+    
+    .menu nav ul{
+        font-size: 1.3rem;  
+    }
+
+    .menu nav ul li a{
+        padding: 0.2rem 0.6rem;
+    }
+
+    .clcr{
+        margin-top: 0rem;  
+        font-size: 1rem;
+    }
+    
+    .clcr h1{
+        margin-bottom: 1.8rem;
+        font-size: 1.3rem;
+    }
+    
+    .clcr h4{
+        margin-top: 2.2rem;
+        font-size: 1.1rem;
+    }
+    
+    .clcr1{
+        grid-template-columns: 1fr 120px 1fr;
+    }
+
+    .filtracaosem{
+        width: 80px;
+        height: 100px;
+    }
+
+    .rimazul{
+        width: 400px;
+    }
+
+    #ajust{
+      max-height: 100vh;
+    }
+
+    #ajuste h1{
+        margin-bottom: -2rem;
+    }
+
+    #intro{
+        font-size: 1.8rem;
+    }
+
+    .lado{
+        padding: 0;
+        max-height: 80vh;
+        margin-top: 0rem;
+        gap: 0;
+    }
+
+    .rimaesquerda{
+        width: 360px;
+    }
+
+    .ajuste{
+        margin-right: 8rem; 
+        margin-top: 3rem;
+        font-size: 1.2rem;       
+    }
+
+    #ajust{
+        margin-top: -2rem;
+    }
+
+    .campo{
+        gap: 0;
+        margin-top: 0rem;
+    }
+
+    .res{
+        height: 1.8rem;
+    }
+}
+
+@media(max-width: 720px){
+
+    .barra{
+        display: none;
+    }
+
+    aside{
+        bottom: 1.5rem;
+        top: 1.5rem;
+        left: 0.5rem; 
+        margin: 0 auto;
+        right: 0.5rem; 
+        align-items: center;
+        justify-content: center;   
+        max-width: 100vw; 
+        max-height: 90vh;   
+    }
+
+    .rcphealth{
+        bottom: 0.5rem;
+        right: 1.2rem;
+        width: 3rem;
+    }
+    
+    #intro{
+        font-size: 1.5rem;
+        height: 100vh;
+        overflow: hidden;  
+    }
+
+    .rimazul{
+        width: 80vw;
+    }
+
+    .menu{
+        gap: 1rem;
+        flex-direction: column;
+        justify-content: center;
+        height: 90vh;
+        font-size: 1.5rem;
+        margin-bottom: 50rem;
+    }
+    .menu nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu h1 img{
+        display: none;
+    }
+
+    .menu nav ul li{
+        padding: 1rem 0;
+        font-weight: 600;
+        font-size: 1.4rem;
+    }
+
+    .menu nav ul li img{
+        border-radius: 50%;
+    }
+
+    .hidden{
+        background-image: url('/assets/image/reloadazul.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 2rem;
+        width: 2rem;
+        margin-top: 1.2rem;
+        
+    }
+
+    .res{
+        height: 1rem;
+        padding: 1rem;  
+    }
+
+    aside{
+        display: none;
+        background-color: whitesmoke;   
+    }
+
+    .close{
+        position: fixed;
+        z-index: 5;
+        top: 0;
+        left: 0;  
+    }
+
+    .closelabel::after{
+        content: "≡";
+        position: fixed;
+        z-index: 5;
+        top: 1.5rem;
+        right: 1.5rem;
+        background-color: rgb(1, 1, 90);
+        color: white;
+        font-size: 3.2rem;
+        line-height: 2.1rem;
+        height: 2.2rem;
+        width: 2rem;
+        text-align: center;
+        padding: 0.2rem;
+        cursor: pointer;
+    }
+
+    .close:checked~aside{
+        display: block;
+        width: 90vw;
+        height: 400px;
+        background-color: whitesmoke;
+        border: solid 0.2rem rgb(1, 1, 90);  
+    }
+
+    .close:checked~aside .menu{
+        width: 90vw;
+        height: 352px;
+    }
+
+    .close:checked~aside .menu, .close:checked~aside .menu li a {
+        background-color: whitesmoke;
+        color: rgb(1, 1, 90);
+    }
+
+    .close:checked~.closelabel::after{
+        content: '×';
+    }
+
+    .rimaesquerda{
+        display: none;
+    }
+
+    .ajuste{
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        width: 100vw;
+        font-size: 1.2rem;
+    }
+
+    .ajuste button{
+        font-size: 0.6rem;
+    }
+
+    .ajuste h4{
+        font-size: 0.6rem;
+    }
+
+    .ajuste form label{ 
+        font-size: 0.8rem;
+    }
+
+    .ajuste form button{
+        padding: 0.3rem;
+    }
+
+    .lado{
+        align-items: center;
+        justify-items: center;
+        display: flex;
+        flex-flow: column wrap;
+        height: 100vh;
+        width: 100vw;
+        max-width: 420px;
+        margin-top: 2rem;      
+    }
+
+    .clcr h1{
+        margin-top: 3rem;
+        margin-bottom: 0rem;
+    }
+
+    .clcr h3{
+        font-size: 1rem;
+    }
+
+    #clcr h4{
+        font-size: 1.1rem;
+        margin-top: 0rem;
+    }
+
+    .clcr label, .clcr input, .clcr button{
+        font-size: 0.8rem;
+    }
+
+    .clcr1{
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .clcr1 img{
+        width: 0rem;
+        height: 0rem;
+    }
+}
