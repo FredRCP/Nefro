@@ -223,7 +223,7 @@ section h1{
 
 .clear:hover{
     background-color: rgba(141, 141, 221, 0.575);
-    border: 0.2rem solid rgba(0, 0, 139, 0.144);
+    border: 0.2rem solid rgba(0, 0, 139, 0.509);
     border-radius: 5%;
 }
 
@@ -457,7 +457,7 @@ section h1{
     
     .clcr h1{
         margin-bottom: 0.8rem;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     #clcr h4{
@@ -486,6 +486,7 @@ section h1{
     }
 
     #ajuste h1{
+        font-size: 1.2rem;
         margin-bottom: -2rem;
     }
 
