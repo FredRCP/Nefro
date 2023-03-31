@@ -105,7 +105,8 @@ function calcularckd(){
         else{resultado="ClCr estimado: "+cf + " ml/min/1,73m2." +
                 " Recomendada a avaliação de um nefrologista!"}
         addclasse(cf);
-        document.querySelector("#output").innerHTML=resultado    
+        document.querySelector("#output").innerHTML=resultado
+        document.getElementById('crg').focus();    
     }
 
     //EVENTOS DE CLICAR
@@ -287,6 +288,8 @@ function calcularckd(){
         else if(clcr<=80&&clcr>=30){dose="Ataque (6mg/kg 12/12h 3 doses), após 6mg/kg a cada 48h"} 
         else if(clcr<30){dose="Ataque (6mg/kg 12/12h 3 doses), após 6mg/kg a cada 72h; se em HD, dose extra após; se HD contínua, 6mg/kg 48/48h"}
         break;
+        case "tetraciclina": if(clcr>=10){dose="250 - 500mg até 4x ao dia, via oral."} else{dose="250mg até 4x ao dia, via oral."}
+        break;
         case "tobramicina": if(clcr>50){dose="1,7 a 2mg/kg de 8/8h"} else if(clcr<=50&&clcr>=10){dose="1,7 a 2mg/kg a cada 12/24h"} 
         else if(clcr<10){dose="1,7 a 2mg/kg a cada 48h; se em HD, fazer dose extra de 0,85 a 1mg/kg após; se HD contínua, 1,7 a 2mg/kg a cada 24h"}
         break;
@@ -459,6 +462,9 @@ function calcularckd(){
         case "glipizida": dose="2,5 a 20mg/dia, não precisa de ajuste; experiência limitada quanto ao uso para clcr<30."
         break;
         case "glibenclamida": if(clcr>=60){dose="2,5 a 20g ao dia"} else{dose="Evitar a medicação"}
+        break;
+        case "hidroxicloroquina": if(clcr>50){dose="200mg a 400mg ao dia, via oral."} else if(clcr<50&&clcr>=30){dose="150mg ao dia."} 
+        else if(clcr<30){dose="50 a 100mg ao dia, usar com cautela. Não é dialisável."}
         break;
         case "linagliptina": dose="5mg ao dia, não precisa de ajuste"
         break;
