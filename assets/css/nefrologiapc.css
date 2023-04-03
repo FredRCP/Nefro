@@ -66,6 +66,7 @@ aside{
     right: 3rem;
     width: 4rem;
     transition: all 700ms ease-in-out;
+    cursor: pointer;
 }
 
 .rcphealth:hover{

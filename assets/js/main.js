@@ -132,6 +132,10 @@ function calcularckd(){
         
     })
 
+    function site(){
+        window.open('https://drfredericonefrologistauberaba.negocio.site/?m=true', '_target')
+    }
+
     //FUNÇÃO AJUSTE
 
     function ajuste(){
