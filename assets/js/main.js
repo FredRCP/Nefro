@@ -133,7 +133,7 @@ function calcularckd(){
     })
 
     function site(){
-        window.open('https://drfredericonefrologistauberaba.negocio.site/?m=true', '_target')
+        window.open('https://nefrologistauberaba.negocio.site/', '_target')
     }
 
     //FUNÇÃO AJUSTE
@@ -507,7 +507,7 @@ function calcularckd(){
         }
           
         function inf(){
-            document.querySelector("#ajust").innerHTML='Literatura: "Sanford Guide" e "Renal Drug"'
+            document.querySelector("#ajust").innerHTML='Fonte: "Sanford Guide" e "Renal Drug"'
         }
 
 //RESETAR
