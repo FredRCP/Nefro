@@ -175,7 +175,7 @@ function calcularckd(){
         break;
         case "anfotericina b": dose="0,4 a 1mg/kg/dia, não precisa de correção para a função renal"
         break;
-        case "anita": dose= "500mg 12/12h, sem dados na literatura para correção para a função renal"
+        case "annita": dose= "500mg 12/12h, sem dados na literatura para correção para a função renal"
         break;
         case "azitromicina": dose="500mg a cada 24h, não precisa de correção para a função renal"
         break;
@@ -262,7 +262,7 @@ function calcularckd(){
         break;
         case "metronidazol": if(clcr>50){dose="500mg de 8/8h"} else if(clcr<=50&&clcr>=10){dose="500mg de 12/12h"} else if(clcr<10){dose="250mg de 8/8h"}
         break;
-        case "nitazoxanida": dose="500mg de 12/12h, sem dados para alteração de função renal"
+        case "nitazoxanida": dose="500mg de 12/12h, faltam dados mais precisos para ajuste conforme função renal"
         break;
         case "nitrofurantoína": if(clcr>=20){dose="100mg de 6/6h"} else {dose="medicação contra-indicada para essa função renal"}
         break;               
@@ -407,6 +407,8 @@ function calcularckd(){
         break;
         case "quetiapina": if(clcr>50){dose="dose habitual"} else{dose="iniciar com 25mg/dia e aumentar de 25 a 50mg ao dia conforme resposta."}
         break;
+        case "trazodona": dose="Não precisa de ajuste para a função renal."
+        break;
         case "venlafaxina": if(clcr>=30){dose="dose habitual"} else{dose="iniciar com 37,5mg, dose máxima é 50% da habitual, válido para todas as modalidades de TRS"}
         break;
         case "youtube": dose="Toma vergonha na cara Zé!"
@@ -422,6 +424,8 @@ function calcularckd(){
         break;
         case "alopurinol": if(clcr>50){dose="300mg ao dia"} else if(clcr<=50&&clcr>=20){dose="200 - 300mg/dia"} 
         else if(clcr<20&&clcr>=10){dose="100-200mg/dia"} else{dose="100mg/dia."}
+        break;
+        case "amiodarona": dose="Não precisa de ajuste para a função renal."
         break;
         case "apixabana": if(clcr>50){dose="Dose habitual"} else if(clcr<=50&&clcr>30){dose="Dose habitual, usar com cautela"}
         else if(clcr<=30&&clcr>15){dose="Dose habitual, usar com cautela; se uso para FA, 2.5mg 12/12h"} else{dose="Usar com muita cautela; se uso para FA, 2.5mg 12/12h"}
