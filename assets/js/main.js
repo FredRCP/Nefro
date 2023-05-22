@@ -179,6 +179,9 @@ function calcularckd(){
         break;
         case "azitromicina": dose="500mg a cada 24h, não precisa de correção para a função renal"
         break;
+        case "bactrim": if(clcr>=30){dose="5-20 mg/kg/dia, dividir em 2, 3 ou 4 tomadas"} else if(clcr<30&&clcr>=10){dose="5-10 mg/kg/dia de 12/12h"} 
+        else if(clcr<10){dose="evitar, mas se optar por usar,  5-10mg/kg a cada 24h"}
+        break;    
         case "cefalexina": if(clcr>20){dose="500mg de 6/6h, via oral"} else{dose= "500mg de 8/8h a 12/12h, via oral"}
         break;
         case "cefazolina": if(clcr>50){dose="1 a 2g de 8/8h"} else if(clcr<=50&&clcr>=10){dose="1 a 2g de 12/12h"} else if(clcr<10){dose="1 a 2g a cada 24/48h"}
@@ -283,7 +286,7 @@ function calcularckd(){
         break;
         case "secnidazol": dose= "dose habitual, correção para função renal ainda controversa"
         break;
-        case "Sulfametoxazol-Trimetoprim": if(clcr>=30){dose="5-20 mg/kg/dia, dividir em 2, 3 ou 4 tomadas"} else if(clcr<30&&clcr>=10){dose="5-10 mg/kg/dia de 12/12h"} 
+        case "sulfametoxazol-trimetoprim": if(clcr>=30){dose="5-20 mg/kg/dia, dividir em 2, 3 ou 4 tomadas"} else if(clcr<30&&clcr>=10){dose="5-10 mg/kg/dia de 12/12h"} 
         else if(clcr<10){dose="evitar, mas se optar por usar,  5-10mg/kg a cada 24h"}
         break;
         case "tazocin": if(clcr>50){dose="4,5g de 8/8h a 6/6h"} else if(clcr<=50&&clcr>=20){dose="2,25g de 6/6h"} else if(clcr<20){dose="2,25g de 8/8h"}
