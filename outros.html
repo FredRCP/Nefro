@@ -1,0 +1,155 @@
+<section id="formula">
+    <div class="barra"></div><br>
+    <div class="formula">
+        
+        <h1>Fórmulas, Fluxogramas e Orientações</h1><br>
+        
+
+            <select class="select" name="qual" id="fqual">
+                <option style="text-align: center;" value="nada">Escolha o tema</option>
+                <option value="ac">calcular água corporal</option>
+                <option value="heparina">dosagem de heparina na hemodiálise</option>
+                <option value="fena">fração de excreção de sódio</option>
+                <option value="hidradiaria">hidratação oral diária</option>
+                <option value="hidradengue">hidratação oral em dengue</option>
+                <option value="hipercalemia">hipercalemia</option>
+                <option value="hipocalemia">hipocalemia</option>
+                <option value="hiponatremia">hiponatremia</option>
+                <option value="imc">índice de massa corporal (IMC)</option>
+                <option value="osmolaridade">osmolaridade sérica</option>
+                <option value="bic">reposição de bicarbonato</option>
+                <option value=""></option>
+            </select>
+            <br>
+
+            <div id="nada" style="display: none;"></div>
+
+            
+            <div id="ac" style="display: none;">
+                <div class="dentro">
+                    <label for="pesoac">Peso</label>
+                    <input type="number" placeholder="Kg" id="pesoac">
+                    <div>
+                    <label for="hgac">Sexo</label><br>
+                    <input type="radio" name="sexoac" id="hgac" value="hgac" checked>Masculino
+                    <input type="radio" name="sexoac" id="mgac" value="mgac">Feminino
+                    </div>
+                    <div>
+                    <label for="idoso">Idoso</label>
+                    <input type="checkbox" name="idoso" id="idoso">
+                    </div>
+                    <div>
+                        <button onclick="ac()">Calcular água corporal</button>
+                        <button onclick="limparformula()">Limpar</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div id="heparina" style="display: none;">
+                heparina
+            </div>
+
+
+            <div id="fena" style="display: none;">
+                <div class="dentro">
+                    <label for="sodios">Sódio sérico</label>
+                    <input type="number" placeholder="mEq/l ou mmol/l" id="sodios">
+                    <label for="sodiou">Sódio urinário</label>
+                    <input type="number" placeholder="mEq/l ou mmol/l" id="sodiou">
+                    <label for="crs">Creatinina sérica</label>
+                    <input type="number" placeholder="mg/dl" id="crs">
+                    <label for="cru">Creatinina urinária</label>
+                    <input type="number" placeholder="mg/dl" id="cru">
+                    <div>
+                        <button onclick="fena()">Calcular fração de excreção de sódio</button>
+                        <button onclick="limparformula()">Limpar</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="hidradiaria" style="display: none;">
+                <div class="dentro">
+                    <label for="pesoh">Peso</label>
+                    <input type="number" placeholder="em Kg" id="pesoh">
+                    <div>
+                        <button onclick="hidra()">Calcular hidratação</button>
+                        <button onclick="limparformula()">Limpar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="hidradengue" style="display: none;">
+                <div class="dentro">
+                    <label for="pesod">Peso</label>
+                    <input type="number" placeholder="em Kg" id="pesod">
+                    <div>
+                        <button onclick="hidrad()">Calcular hidratação</button>
+                        <button onclick="limparformula()">Limpar</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div id="hipercalemia" style="display: none;">
+                hipercalemia
+            </div>
+
+            
+            <div id="hipocalemia" style="display: none;">
+                hipocalemia
+            </div>
+
+
+            <div id="hiponatremia" style="display: none;">
+                hiponatremia
+            </div>
+
+
+            <div id="imc" style="display: none;">
+                <div class="dentro">
+                    <label for="pesoimc">Peso</label>
+                    <input type="number" placeholder="em Kg" id="pesoimc">
+                    <label for="alturaimc">Altura</label>
+                    <input type="number" placeholder="em cm" id="alturaimc">
+                    <div>
+                        <button onclick="imc()">Calcular IMC</button>
+                        <button onclick="limparformula()">Limpar</button>
+                    </div>
+                </div>
+                
+            </div>
+
+
+            <div id="osmolaridade" style="display: none;">
+               
+                <div class="dentro">
+                    <label for="sodio">Sódio sérico</label>
+                    <input type="number" placeholder="mEq/litro" id="sodio">
+                    <label for="glicose">Glicemia</label>
+                    <input type="number" placeholder="mg/dL" id="glicose">
+                    <label for="ureia">Uréia</label>
+                    <input type="number" placeholder="mg/dL" id="ureia">
+                    <div>
+                        <button onclick="osm()">Calcular osmolaridade</button>
+                        <button onclick="limparformula()">Limpar</button>
+                    </div>
+                </div>
+                
+            </div>
+
+
+            <div id="bic" style="display: none;">
+                reposição de bicarbonato
+            </div>
+
+            <h4 id="resultadoformula"></h4>
+          
+
+    </div>
+    
+</section>
+
+<script src="./assets/js/formulas.js"></script>
+
