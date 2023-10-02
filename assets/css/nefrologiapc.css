@@ -369,6 +369,101 @@ section h1{
     height: 2rem;
 }
 
+.caixas{
+    display: flex;
+    flex-flow: column wrap;
+    width: 300px;
+    height: 400px;
+}
+
+.caixas input{
+    display: flex;
+}
+
+#formula{
+    background-size: contain;
+    background-position: center;  
+}
+
+.formula{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;  
+    justify-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    font-size: 1.4rem;
+}
+
+
+.formula h4{
+    font-size: 1.6rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.formula div .dentro{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;  
+    transition: all 300ms ease-in-out;
+    padding: 1rem;
+    border-radius: 1rem;  
+    border: 0.4rem solid rgba(0, 0, 139, 0);
+    padding: 1rem 1rem;  
+    gap: 0.3rem; 
+    text-align: center;
+} 
+
+.dentro div{
+    text-align: center;
+    font-size: 1.0rem;
+}
+
+.dentro div label{
+    font-size: 1.4rem;
+}
+
+.dentro input{
+    text-align-last: center;
+}
+
+.formula div .dentro:hover{
+    border: 0.4rem solid rgb(1, 1, 90);
+    background-color: rgba(141, 141, 221, 0.575);
+}
+
+
+
+.formula input:focus{
+    color: rgb(1, 1, 90);
+    outline-color: rgb(1, 1, 90);
+}
+
+.formula button{
+     margin-top: 1rem;
+     margin-bottom: 1rem;   
+}
+
+.formula button:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
 @media(max-width:1600px){
     .rimazul{
         width: 500px;

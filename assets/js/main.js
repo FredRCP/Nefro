@@ -179,9 +179,6 @@ function calcularckd(){
         break;
         case "azitromicina": dose="500mg a cada 24h, não precisa de correção para a função renal"
         break;
-        case "bactrim": if(clcr>=30){dose="5-20 mg/kg/dia, dividir em 2, 3 ou 4 tomadas"} else if(clcr<30&&clcr>=10){dose="5-10 mg/kg/dia de 12/12h"} 
-        else if(clcr<10){dose="evitar, mas se optar por usar,  5-10mg/kg a cada 24h"}
-        break;    
         case "cefalexina": if(clcr>20){dose="500mg de 6/6h, via oral"} else{dose= "500mg de 8/8h a 12/12h, via oral"}
         break;
         case "cefazolina": if(clcr>50){dose="1 a 2g de 8/8h"} else if(clcr<=50&&clcr>=10){dose="1 a 2g de 12/12h"} else if(clcr<10){dose="1 a 2g a cada 24/48h"}
@@ -286,7 +283,7 @@ function calcularckd(){
         break;
         case "secnidazol": dose= "dose habitual, correção para função renal ainda controversa"
         break;
-        case "sulfametoxazol-trimetoprim": if(clcr>=30){dose="5-20 mg/kg/dia, dividir em 2, 3 ou 4 tomadas"} else if(clcr<30&&clcr>=10){dose="5-10 mg/kg/dia de 12/12h"} 
+        case "Sulfametoxazol-Trimetoprim": if(clcr>=30){dose="5-20 mg/kg/dia, dividir em 2, 3 ou 4 tomadas"} else if(clcr<30&&clcr>=10){dose="5-10 mg/kg/dia de 12/12h"} 
         else if(clcr<10){dose="evitar, mas se optar por usar,  5-10mg/kg a cada 24h"}
         break;
         case "tazocin": if(clcr>50){dose="4,5g de 8/8h a 6/6h"} else if(clcr<=50&&clcr>=20){dose="2,25g de 6/6h"} else if(clcr<20){dose="2,25g de 8/8h"}
@@ -464,6 +461,7 @@ function calcularckd(){
         case "enoxaparina": if(clcr>30){dose="dose habitual"} else if(clcr<=30&&clcr>=15){dose="administrar 50% da dose; se para trombofilaxia: 20mg/dia."} 
         else {dose="administrar 50% da dose; se para trombofilaxia: 20mg/dia; se possível evitar a medicação e avaliar outra opção."}
         break;
+        case "evoglipitina": if(clcr>60){dose="5mg ao dia"} else if(clcr<60&&clcr>10){dose=" não precisa de ajuste, usar com cautela."} else{dose="não há dados comprovando segurança no seu uso"}
         case "ezetimibe": dose="10mg ao dia, não precisa de ajuste."
         break;
         case "gliclazida": dose="30 a 120mg/dia, não precisa de ajuste; experiência limitada quanto ao uso para clcr<30."
@@ -506,7 +504,7 @@ function calcularckd(){
         else if(clcr<30&&clcr>15){dose="15mg ao dia, usar com cautela; se uso para TVP/TEP, 15mg 12/12h por 3 semanas e após 15-20mg/dia"} else{dose="Evitar"}
         break;   
                                      
-        default: dose='Medicamento não cadastrado.'+ '<br>'+  'Para maiores informações e/ou inclusão da medicação, entre em contato: ' + "<i>" +'fredrcpmed@gmail.com' + "</i>";
+        default: dose='Medicamento não cadastrado.'+ '<br>'+  'Para maiores informações e/ou inclusão da medicação, entre em contato';
         }
 
         document.querySelector("#ajust").innerHTML= "<b>" + medicamento.toUpperCase()+'<br>' + dose;
@@ -514,8 +512,12 @@ function calcularckd(){
         }
           
         function inf(){
-            document.querySelector("#ajust").innerHTML='Fonte: "Sanford Guide" e "Renal Drug"'
+            document.querySelector("#ajust").innerHTML='Fonte: "Sanford Guide", "Renal Drug"'
         }
+
+function link(){
+        window.open('mailto:fredrcpmed@gmail.com', '_target');   
+}
 
 //RESETAR
 
@@ -544,3 +546,9 @@ function calcularckd(){
         document.querySelector('#nclcr').value="" 
         document.querySelector('#ajust').innerHTML=""
     }
+
+    function limparformula(){
+        document.querySelector("#resultadoformula").innerHTML=""
+    }
+
+    
