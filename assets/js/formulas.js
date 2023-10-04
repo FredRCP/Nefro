@@ -24,6 +24,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const div10=document.querySelector('#osmolaridade');
         const div11=document.querySelector('#imc');
         const div12=document.querySelector('#bic');
+        const div13=document.querySelector('#calculadora');
+        const div14=document.querySelector('#pfr');
+        const div15=document.querySelector('#ag');
 
         div1.style.display="none";
         div2.style.display="none";
@@ -37,6 +40,9 @@ document.addEventListener("DOMContentLoaded", function() {
         div10.style.display="none";
         div11.style.display="none";
         div12.style.display="none";
+        div13.style.display="none";
+        div14.style.display="none";
+        div15.style.display="none";
         
         if (selectedOption === 'nada') {
             div1.style.display = 'block';
@@ -62,7 +68,14 @@ document.addEventListener("DOMContentLoaded", function() {
             div11.style.display = 'block'
         } else if (selectedOption === 'bic') {
             div12.style.display = 'block'
+        } else if (selectedOption === 'calculadora') {
+            div13.style.display = 'block'
+        } else if (selectedOption === 'pfr') {
+            div14.style.display = 'block'
+        } else if (selectedOption === 'ag') {
+            div15.style.display = 'block'
         }
+        
     });
 
 });
@@ -81,6 +94,10 @@ function limparformula(){
     document.querySelector('#sodiou').value='';
     document.querySelector('#crs').value='';
     document.querySelector('#cru').value='';
+    document.querySelector("#pesohep").value='';
+    document.querySelector('#idadepfr').value='';
+    document.querySelector('#pesorep').value='';
+    document.querySelector('#base').value='';
 }
 
 //IMC
@@ -147,11 +164,15 @@ function ac(){
     document.querySelector('#resultadoformula').innerHTML= "<h5>"+'A água corporal estimada é: '+ad+"litros";    
 }
 
+//CALCULADORA
+
+
 //HIDRATAÇÃO ORAL
 
 function hidra(){
     let pesoh=document.querySelector("#pesoh").value
     pesoh=Number(pesoh);
+    if(!pesoh){ return document.querySelector("#resultadoformula").innerHTML="preencha o peso"}
     let hidra= pesoh*35;
     document.querySelector('#resultadoformula').innerHTML= "<h5>"+'A hidratação oral média recomendada é '+ '<big>' +hidra+'</big>'+"ml em 24h";
 }
@@ -161,6 +182,7 @@ function hidra(){
 function hidrad(){
     let pesod=document.querySelector("#pesod").value
     pesod=Number(pesod);
+    if(!pesod){ return document.querySelector("#resultadoformula").innerHTML="preencha o peso"}
     let hidrad= pesod*60;
     document.querySelector('#resultadoformula').innerHTML= "<h5>"+'A hidratação oral diária recomendada é de '+ '<big>' +hidrad/3+'</big>'+"ml de soro de reidratação oral (SRO) e " +
     '<big>' +hidrad*(2/3)+'</big>'+ 'ml dos demais líquidos.';
@@ -181,6 +203,134 @@ function fena(){
     let fena= (sodiou*crs)/(sodios*cru) *100;
     fena= fena.toFixed(2);
     document.querySelector('#resultadoformula').innerHTML= "<h5>"+'A fração de excreção de sódio é: ' + fena +"%";
-
 }
+
+//HEPARINA EM HD
+
+function hephep(){
+    let peso= document.querySelector("#pesohep").value
+    peso= Number(peso)
+    if(!peso){return document.querySelector("#resultadoformula").innerHTML='preencha o peso'}
+    var pesomin= peso/100
+    var pesomax= (peso*3)/100
+    pesomin= pesomin.toFixed(1)
+    pesomax= pesomax.toFixed(1)
+    
+    document.querySelector("#resultadoformula").innerHTML= "A dose recomendada é de "+pesomin + " a " + pesomax+ 
+    " ml de heparina (5000UI/ml)."
+}
+
+function hepenox(){
+    let peso= document.querySelector("#pesohep").value
+    peso= Number(peso) 
+    if(!peso){ return document.querySelector("#resultadoformula").innerHTML='preencha o peso'}
+    document.querySelector("#resultadoformula").innerHTML= "A dose recomendada é de "+peso + "mg."
+}
+
+//FUNÇÃO RENAL ESPERADA PARA IDADE
+
+function pfr(){
+    let idadepfr= document.querySelector('#idadepfr').value;
+    idadepfr=Number(idadepfr);
+    if(!idadepfr){return document.querySelector("#resultadoformula").innerHTML='preencha a idade'}
+    let pfr='';
+    let pfrmin="";
+    let pfrmax="";
+    if(idadepfr<=40){pfr= " >=90"} else {pfrmin= 90 - (idadepfr-40)*0.5; 
+    pfrmax= 90 - (idadepfr-40); pfr=" de " + pfrmax +" a " + pfrmin}
+    document.querySelector("#resultadoformula").innerHTML= "O ClCr esperado para a idade, aproximadamente é" + pfr + "ml/min/1,73m2"
+}
+
+
+//ANION GAP
+
+function ag(){
+    let sodioag= document.querySelector('#sodioag').value
+    sodioag=Number(sodioag)
+    let cloroag=document.querySelector('#cloroag').value
+    cloroag=Number(cloroag)
+    let bicag=document.querySelector('#bicag').value
+    bicag=Number(bicag)
+    //let kag=document.querySelector('#kag').value
+    //kag=Number(kag)
+    if(!sodioag || !cloroag || !bicag) {return document.querySelector("#resultadoformula").innerHTML="preencha todos os dados"}
+    let ag= sodioag - (cloroag + bicag);
+    document.querySelector('#resultadoformula').innerHTML= "<h5>"+'Ânion gap calculado é: ' + ag +'mEq/l';
+}
+
+//REPOSIÇÃO DE BIC
+
+function repobic(){
+    let pesorep= document.querySelector('#pesorep').value
+    pesorep=Number(pesorep)
+    let base=document.querySelector('#base').value
+    base=Number(base)
+    if(!pesorep || !base) {return document.querySelector("#resultadoformula").innerHTML="preencha todos os dados"}
+    let repobic= pesorep*0.3*base;
+    document.querySelector('#resultadoformula').innerHTML= "<h5>"+"Reposição com Bicarbonato de Sódio 8,4%:"
+    + "<br>" + repobic/3 + "ml a cada 8h EV" + "<br>" + "ou" + "<br>" + "empiricamente "
+    + pesorep + 'ml a cada 8h EV';
+}
+
+//CALCULADORA
+
+let n1="0";
+let operacao=null;
+let n2="";
+        
+        function incluirDigito(digito){
+            if(operacao!==null){n2=n2+digito; mostradisplay(n2)} else{
+                if(n1==="0"){n1=digito} else{n1+=digito} ; mostradisplay(n1)}}
+    
+        function mostradisplay(m){
+            document.querySelector("#display").innerHTML=m
+        }
+        
+        function iniciarCalculo(simbolo){
+            if(clicadoigual){
+                clicadoigual=false
+                n2=""
+            }
+            if(operacao===null || n2===""){operacao=simbolo}
+            else{
+                var valor= calcular()
+                n1=valor
+                operacao=simbolo
+                n2=''
+                mostradisplay(n1)}}
+    
+        function calcular(simbolo){
+            let numero=0
+            let _n1=parseFloat(n1)
+            let _n2=parseFloat(n2)
+            switch(operacao){
+                case '+': numero= _n1 + _n2
+                break
+                case '-': numero= _n1 - _n2
+                break
+                case '*': numero= _n1 * _n2
+                break
+                case '/': numero= _n1 / _n2}
+            return numero}
+        
+        let clicadoigual= false
+        function finalizarCalculo(){
+            clicadoigual=true
+            let valor=calcular()
+            n1=valor
+            mostradisplay(n1)
+        }
+        
+        function incluirPonto(){
+            if(operacao&&n2){n2=n2+"."}
+            else {if(operacao&&n2===""){n2="0."}
+            else{n1=n1+"."}}
+        }
+        
+         function limparcalculadora(){
+            n1="0"
+            operacao=null
+            mostradisplay(n1)
+        }
+
 
