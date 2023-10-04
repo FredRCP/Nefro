@@ -7,9 +7,13 @@
 
             <select class="select" name="qual" id="fqual">
                 <option style="text-align: center;" value="nada">Escolha o tema</option>
+                <option value=""></option>
                 <option value="ac">calcular água corporal</option>
+                <option value="ag">calcular ânion gap</option>
+                <option value="calculadora">calculadora</option>
                 <option value="heparina">dosagem de heparina na hemodiálise</option>
                 <option value="fena">fração de excreção de sódio</option>
+                <option value="pfr">função renal esperada para idade</option>
                 <option value="hidradiaria">hidratação oral diária</option>
                 <option value="hidradengue">hidratação oral em dengue</option>
                 <option value="hipercalemia">hipercalemia</option>
@@ -45,9 +49,33 @@
                 </div>
             </div>
 
+
+            <div id="ag" style="display: none;">
+                <div class="dentro">
+                    <label for="sodioag">Sódio sérico</label>
+                    <input type="number" placeholder="mEq/l" id="sodioag">
+                    <label for="cloroag">Cloro sérico</label>
+                    <input type="number" placeholder="mEq/l" id="cloroag">
+                    <label for="bicag">Bicarbonato sérico</label>
+                    <input type="number" placeholder="mEq/l" id="bicag">
+                    <div>
+                    <button onclick="ag()">Ânion gap</button>
+                    <button onclick="limparformula()">Limpar</button>
+                    </div>
+                </div>
+            </div>
+
             
             <div id="heparina" style="display: none;">
-                heparina
+                <div class="dentro">
+                    <label for="pesohep">Peso</label>
+                    <input type="number" placeholder="em Kg" id="pesohep">
+                    <div>
+                    <button onclick="hephep()">Heparina não fracionada</button>
+                    <button onclick="hepenox()">Enoxaparina</button>
+                    <button onclick="limparformula()">Limpar</button>
+                    </div>
+                </div>
             </div>
 
 
@@ -96,14 +124,58 @@
                 hipercalemia
             </div>
 
+            <div id="calculadora" style="display: none;">
+                
+                <div id="calculator">
+                    
+                    <div id="display">0</div>
+                    
+                    <button onclick="limparcalculadora()">AC</button> 
+                    <button onclick="obterPorcento()">%</button> 
+                    <button onclick="iniciarCalculo('*')">x</button> 
+                    <button onclick="iniciarCalculo('/')">/</button> 
+                    <button onclick="incluirDigito('7')">7</button> 
+                    <button onclick="incluirDigito('8')">8</button> 
+                    <button onclick="incluirDigito('9')">9</button> 
+                    <button onclick="iniciarCalculo('-')">-</button>
+                    <button onclick="incluirDigito('4')">4</button> 
+                    <button onclick="incluirDigito('5')">5</button> 
+                    <button onclick="incluirDigito('6')">6</button> 
+                    <button onclick="iniciarCalculo('+')">+</button> 
+                    <button onclick="incluirDigito('1')">1</button> 
+                    <button onclick="incluirDigito('2')">2</button> 
+                    <button onclick="incluirDigito('3')">3</button> 
+                    <button onclick="finalizarCalculo()" class="mais">=</button>
+                    <button class="zero" onclick="incluirDigito('0')">0</button> 
+                    <button onclick="incluirPonto()">,</button> 
+                    
+                </div>
+            </div>
+
+            <div id="pfr" style="display: none;">
+                <div class="dentro">
+                    <label for="idadepfr">Idade</label>
+                    <input type="number" placeholder="em anos" id="idadepfr">
+                    <div>
+                        <button onclick="pfr()">Calcular função renal esperada</button>
+                        <button onclick="limparformula()">Limpar</button>
+                    </div>
+                </div>
+            </div>
+
             
             <div id="hipocalemia" style="display: none;">
-                hipocalemia
+                <div class="dentro">
+                    MODELO
+                </div>
             </div>
 
 
             <div id="hiponatremia" style="display: none;">
                 hiponatremia
+                <div>
+                    
+                </div>
             </div>
 
 
@@ -141,7 +213,16 @@
 
 
             <div id="bic" style="display: none;">
-                reposição de bicarbonato
+                <div class="dentro">
+                    <label for="pesorep">Peso</label>
+                    <input type="number" placeholder="em Kg" id="pesorep">
+                    <label for="base">Base Excess</label>
+                    <input type="number" placeholder="mEq/l" id="base">
+                    <div>
+                        <button onclick="repobic()">Reposição de Bicarbonato</button>
+                        <button onclick="limparformula()">Limpar</button>
+                    </div>
+                </div>
             </div>
 
             <h4 id="resultadoformula"></h4>
