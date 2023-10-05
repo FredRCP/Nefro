@@ -461,7 +461,7 @@ section h1{
 }
 
 #calculator{
-    width: 250px;
+    width: 260px;
     background-image: linear-gradient(#b7b7b7, #9c9c9c);
     padding: 30px 20px;
     border-radius: 5px;
@@ -480,7 +480,7 @@ section h1{
     background-color: whitesmoke;
     border-color:#9c9c9c;
     color: darkblue;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1rem;
     justify-content: center;
     align-items: center;

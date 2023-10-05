@@ -69,7 +69,8 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (selectedOption === 'bic') {
             div12.style.display = 'block'
         } else if (selectedOption === 'calculadora') {
-            div13.style.display = 'block'
+            div13.style.display = 'block';
+            limparcalculadora();
         } else if (selectedOption === 'pfr') {
             div14.style.display = 'block'
         } else if (selectedOption === 'ag') {
@@ -164,7 +165,6 @@ function ac(){
     document.querySelector('#resultadoformula').innerHTML= "<h5>"+'A água corporal estimada é: '+ad+"litros";    
 }
 
-//CALCULADORA
 
 
 //HIDRATAÇÃO ORAL
@@ -279,11 +279,37 @@ let operacao=null;
 let n2="";
         
         function incluirDigito(digito){
-            if(operacao!==null){n2=n2+digito; mostradisplay(n2)} else{
-                if(n1==="0"){n1=digito} else{n1+=digito} ; mostradisplay(n1)}}
+
+            if(n2&&operacao&&clicadoigual){
+                clicadoigual=false;
+                limparcalculadora();
+                n2="";
+                n1=digito;
+                mostradisplay(n1);
+                return;
+            }
+
+            if(operacao!==null){n2=n2+digito; mostradisplay(n2)}
+            else{if(n1==="0"){n1=digito} else{n1+=digito} ; mostradisplay(n1)}}
     
         function mostradisplay(m){
             document.querySelector("#display").innerHTML=m
+        }
+
+        function obterPorcento(){
+            let porcento;
+            if(!n2){
+                limparcalculadora();
+                mostradisplay(n1);
+            } else {
+                if(operacao === "+" || operacao === "-"){
+                    porcento = n1 * n2 / 100;    
+                } else {
+                    porcento = n2 / 100;
+                }
+                n2 = porcento;
+                mostradisplay(n2);
+            }
         }
         
         function iniciarCalculo(simbolo){
@@ -293,7 +319,7 @@ let n2="";
             }
             if(operacao===null || n2===""){operacao=simbolo}
             else{
-                var valor= calcular()
+                let valor= calcular()
                 n1=valor
                 operacao=simbolo
                 n2=''
