@@ -290,7 +290,8 @@ let n2="";
 
             if(operacao!==null){n2=n2+digito;if(n2.length>16){return mostradisplay('error')} else {mostradisplay(n2)}}
 
-            else{if(n1==="0"){n1=digito} else{n1+=digito; if(n1.length>16){return mostradisplay('error')} else{ mostradisplay(n1)}}}}
+            else{if(n1==="0"){n1=digito; mostradisplay(n1)} else{n1+=digito; if(n1.length<16){mostradisplay(n1)} else{return mostradisplay('error')}}}
+        }
     
         function mostradisplay(m){
             document.querySelector("#display").innerHTML=m
