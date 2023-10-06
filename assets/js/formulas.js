@@ -279,7 +279,6 @@ let operacao=null;
 let n2="";
         
         function incluirDigito(digito){
-
             if(n2&&operacao&&clicadoigual){
                 clicadoigual=false;
                 limparcalculadora();
@@ -289,8 +288,9 @@ let n2="";
                 return;
             }
 
-            if(operacao!==null){n2=n2+digito; mostradisplay(n2)}
-            else{if(n1==="0"){n1=digito} else{n1+=digito} ; mostradisplay(n1)}}
+            if(operacao!==null){n2=n2+digito;if(n2.length>16){return mostradisplay('error')} else {mostradisplay(n2)}}
+
+            else{if(n1==="0"){n1=digito} else{n1+=digito; if(n1.length>16){return mostradisplay('error')} else{ mostradisplay(n1)}}}}
     
         function mostradisplay(m){
             document.querySelector("#display").innerHTML=m
@@ -323,6 +323,7 @@ let n2="";
                 n1=valor
                 operacao=simbolo
                 n2=''
+                if(valor.length>16){return mostradisplay('error')}
                 mostradisplay(n1)}}
     
         function calcular(simbolo){
@@ -337,6 +338,7 @@ let n2="";
                 case '*': numero= _n1 * _n2
                 break
                 case '/': numero= _n1 / _n2}
+            if(numero.length>16){return mostradisplay('error')}    
             return numero}
         
         let clicadoigual= false
@@ -344,6 +346,7 @@ let n2="";
             clicadoigual=true
             let valor=calcular()
             n1=valor
+            if(valor.length>16){return mostradisplay('error')}
             mostradisplay(n1)
         }
         
