@@ -61,7 +61,9 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (selectedOption === 'hipocalemia') {
             div8.style.display = "block"
         } else if (selectedOption === 'hiponatremia') {
-            div9.style.display = 'block'
+            let ok= prompt('digite a senha');
+            ok=Number(ok);
+            if(ok===123){div9.style.display = 'block'} else{alert('obtenha a senha correta')}
         } else if (selectedOption === 'osmolaridade') {
             div10.style.display = 'block'
         } else if (selectedOption === 'imc') {
@@ -362,5 +364,7 @@ let n2="";
             operacao=null
             mostradisplay(n1)
         }
+
+    
 
 
