@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (selectedOption === 'hiponatremia') {
             let ok= prompt('digite a senha');
             ok=Number(ok);
-            if(ok===123){div9.style.display = 'block'} else{alert('obtenha a senha correta')}
+            if(ok===123){div9.style.display = 'block'} else{alert('solicite a senha de acesso')}
         } else if (selectedOption === 'osmolaridade') {
             div10.style.display = 'block'
         } else if (selectedOption === 'imc') {
