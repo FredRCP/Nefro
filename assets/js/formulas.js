@@ -87,7 +87,8 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (selectedOption === 'ist') {
             div16.style.display = 'block'
         } else if (selectedOption === 'glasgow') {
-            div17.style.display = 'block'
+            div17.style.display = 'grid'
+            glasgow();
         }
         
     });
@@ -388,6 +389,48 @@ function ist(){
     document.querySelector('#resultadoformula').innerHTML= "<h5>"+"O índice de saturação de transferrina é: "
     + ist + '%.'
 }
+
+//GLASGOW
+
+function glasgow(){
+    let ao=document.querySelector('input[name="aocular"]:checked').value;
+    ao=Number(ao);
+    let rm=document.querySelector('input[name="rm"]:checked').value;
+    rm=Number(rm);
+    let rv=document.querySelector('input[name="rv"]:checked').value;
+    rv=Number(rv);
+    let glasgow= ao + rm + rv;
+    if(ao&&rm&&rv){
+    document.querySelector('#resultadoformula').innerHTML= "<h5>"+ "Glasgow: " + glasgow;}
+}
+
+/*
+const radioInputs = document.querySelectorAll('input[type="radio"]');
+
+// Adicionar um ouvinte de clique a cada elemento de rádio
+radioInputs.forEach(input => {
+  input.addEventListener('click', calcularResultado);
+});
+
+// Função para calcular e exibir o resultado
+function calcularResultado() {
+  // Verificar se todos os três grupos de rádio têm uma opção selecionada
+  const group1Selected = document.querySelector('input[name="group1"]:checked');
+  const group2Selected = document.querySelector('input[name="group2"]:checked');
+  const group3Selected = document.querySelector('input[name="group3"]:checked');
+
+  if (group1Selected && group2Selected && group3Selected) {
+    // Calcular o resultado
+    const resultado = parseInt(group1Selected.value) + parseInt(group2Selected.value) + parseInt(group3Selected.value);
+
+    // Exibir o resultado
+    const resultadoElement = document.getElementById('resultado');
+    resultadoElement.textContent = `Resultado: ${resultado}`;
+  }
+}
+*/
+
+
 
     
 

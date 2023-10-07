@@ -551,5 +551,8 @@ function link(){
     function limparformula(){
         document.querySelector("#resultadoformula").innerHTML=""
     }
+    
+
+   
 
     
