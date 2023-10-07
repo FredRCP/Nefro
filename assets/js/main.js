@@ -35,16 +35,16 @@ function calcularckd(){
     document.querySelector('#output').classList.remove('vermelho');
     document.querySelector('#output').classList.remove('amarelo');
     document.querySelector('#output').classList.add('azul');
-    var cr= document.querySelector('#cr').value
+    let cr= document.querySelector('#cr').value
     cr= parseFloat(cr)
-    var idade=document.querySelector('#idade').value
+    let idade=document.querySelector('#idade').value
     idade=parseFloat(idade)
     if(isNaN(cr)||isNaN(idade)){return document.querySelector("#output").innerHTML="preencha todos os dados acima"}
-    var sexo= document.querySelector('input[name="sexo"]:checked').value
-    var clcr=''
-    var resultado=''
-    var alb=" A_"
-    var ral= document.querySelector("#a1").value
+    let sexo= document.querySelector('input[name="sexo"]:checked').value
+    let clcr=''
+    let resultado=''
+    let alb=" A_"
+    let ral= document.querySelector("#a1").value
     ral= parseFloat(ral)
 
     if(ral<30){alb=" A1"}
@@ -83,20 +83,21 @@ function calcularckd(){
         document.querySelector('#output').classList.remove('vermelho');
         document.querySelector('#output').classList.remove('amarelo');
         document.querySelector('#output').classList.add('azul');
-        var cr=document.querySelector("#crg").value
+        let cr=document.querySelector("#crg").value
         cr=parseFloat(cr)
-        var idade=document.querySelector("#idadeg").value
+        let idade=document.querySelector("#idadeg").value
         idade=parseFloat(idade)
-        var peso=document.querySelector("#pesog").value
+        let peso=document.querySelector("#pesog").value
         peso=parseFloat(peso)
-        var sexo= document.querySelector('input[name="sexog"]:checked').value
-        var clcr= (140-idade)*peso/(cr*72)
+        let sexo= document.querySelector('input[name="sexog"]:checked').value
+        let clcr= (140-idade)*peso/(cr*72)
         clcr= clcr.toFixed(2)
+        let cf;
         if(isNaN(cr) || isNaN(idade) || isNaN(peso)){ return document.querySelector("#output").innerHTML="preencha todos os dados acima"}
         switch(sexo){
-            case "hg": var cf=clcr
+            case "hg": cf=clcr
                 break
-            case "mg":var cf=(clcr*85)/100
+            case "mg": cf=((clcr*85)/100).toFixed(2);
                 break
             }
     

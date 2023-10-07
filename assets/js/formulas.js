@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const div13=document.querySelector('#calculadora');
         const div14=document.querySelector('#pfr');
         const div15=document.querySelector('#ag');
+        const div16=document.querySelector('#ist');
+        const div17=document.querySelector('#glasgow');
 
         div1.style.display="none";
         div2.style.display="none";
@@ -43,6 +45,8 @@ document.addEventListener("DOMContentLoaded", function() {
         div13.style.display="none";
         div14.style.display="none";
         div15.style.display="none";
+        div16.style.display="none";
+        div17.style.display="none";
         
         if (selectedOption === 'nada') {
             div1.style.display = 'block';
@@ -63,7 +67,10 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (selectedOption === 'hiponatremia') {
             let ok= prompt('digite a senha');
             ok=Number(ok);
-            if(ok===123){div9.style.display = 'block'} else{alert('solicite a senha de acesso')}
+            if(ok===123){div9.style.display = 'block';
+            window.open('hiponatremia.html', '_target');
+        } 
+            else{alert('solicite a senha de acesso')}
         } else if (selectedOption === 'osmolaridade') {
             div10.style.display = 'block'
         } else if (selectedOption === 'imc') {
@@ -77,6 +84,10 @@ document.addEventListener("DOMContentLoaded", function() {
             div14.style.display = 'block'
         } else if (selectedOption === 'ag') {
             div15.style.display = 'block'
+        } else if (selectedOption === 'ist') {
+            div16.style.display = 'block'
+        } else if (selectedOption === 'glasgow') {
+            div17.style.display = 'block'
         }
         
     });
@@ -101,6 +112,8 @@ function limparformula(){
     document.querySelector('#idadepfr').value='';
     document.querySelector('#pesorep').value='';
     document.querySelector('#base').value='';
+    document.querySelector('#ferro').value='';
+    document.querySelector('#tibc').value='';
 }
 
 //IMC
@@ -364,6 +377,17 @@ let n2="";
             operacao=null
             mostradisplay(n1)
         }
+
+// ÍNDICE DE SATURAÇÃO DE TRANSFERRINA
+
+function ist(){
+    let ferro= document.querySelector('#ferro').value;
+    let tibc= document.querySelector('#tibc').value;
+    let ist= (ferro/tibc)*100;
+    if(!ferro || !tibc) {return document.querySelector("#resultadoformula").innerHTML="preencha todos os dados"}
+    document.querySelector('#resultadoformula').innerHTML= "<h5>"+"O índice de saturação de transferrina é: "
+    + ist + '%.'
+}
 
     
 

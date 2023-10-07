@@ -14,12 +14,14 @@
                 <option value="heparina">dosagem de heparina na hemodiálise</option>
                 <option value="fena">fração de excreção de sódio</option>
                 <option value="pfr">função renal esperada para idade</option>
+                <option value="glasgow">glasgow (Escala de coma de Glasgow)</option>
                 <option value="hidradiaria">hidratação oral diária</option>
                 <option value="hidradengue">hidratação oral em dengue</option>
                 <option value="hipercalemia">hipercalemia</option>
                 <option value="hipocalemia">hipocalemia</option>
-                <option value="hiponatremia">hiponatremia</option>
+                <option value="hiponatremia">hiponatremia (necessário senha de acesso)</option>
                 <option value="imc">índice de massa corporal (IMC)</option>
+                <option value="ist">índice de saturação de transferrina</option>
                 <option value="osmolaridade">osmolaridade sérica</option>
                 <option value="bic">reposição de bicarbonato</option>
                 <option value=""></option>
@@ -169,11 +171,54 @@
                 </div>
             </div>
 
+            
+            <div id="glasgow" style="display: none;">
+                <div class="">
+                    <label for="aocular"><b>Abertura ocular</b></label><br>
+                    <input type="radio" name="aocular" id="aocular" value="4" checked>Espontânea
+                    <input type="radio" name="aocular" id="aocular" value="3">Ao comando verbal
+                    <input type="radio" name="aocular" id="aocular" value="2">À dor
+                    <input type="radio" name="aocular" id="aocular" value="1">Nenhuma
+                </div>
+                <div class="">
+                    <label for="rm"><b>Resposta motora</b></label><br>
+                    <input type="radio" name="rm" id="rm" value="6" checked>Obedece comandos
+                    <input type="radio" name="rm" id="rm" value="5">Localiza estímulos dolorosos
+                    <input type="radio" name="rm" id="rm" value="4">Movimento de retirada
+                    <input type="radio" name="rm" id="rm" value="3">Decorticação
+                    <input type="radio" name="rm" id="rm" value="2">Descerebração
+                    <input type="radio" name="rm" id="rm" value="1">Nenhuma
+                </div>
+                <div class="">
+                    <label for="rv"><b>Resposta verbal</b></label><br>
+                    <input type="radio" name="rv" id="rv" value="5" checked>Orientado
+                    <input type="radio" name="rv" id="rv" value="4">Confuso
+                    <input type="radio" name="rv" id="rv" value="3">Palavras inapropriadas
+                    <input type="radio" name="rv" id="rv" value="2">Sons incompreensíveis
+                    <input type="radio" name="rv" id="rvrvrvrv" value="1">Nenhuma
+                </div>
+                
+                
+            </div>
+
+
+
+            <div id="ist" style="display: none;">
+                <div class="dentro">
+                    <label for="ferro">Ferro</label>
+                    <input type="number" placeholder="mcg/dL" id="ferro">
+                    <label for="tibc">TIBC</label>
+                    <input type="number" placeholder="mcg/dL" id="tibc">
+                    <div>
+                        <button onclick="ist()">Calcular IST</button>
+                        <button onclick="limparformula()">Limpar</button>
+                    </div>
+                </div>
+            </div>
+
 
             <div id="hiponatremia" style="display: none;">
-                <div class="hiponatremia">
-                    <embed src="./assets/Hiponatremia fluxograma.pdf#toolbar=0" type="application/pdf" width="100%" height="100%">
-                </div>
+                <p>fluxograma na aba ao lado<p>
             </div>
 
 
