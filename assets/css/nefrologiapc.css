@@ -399,6 +399,7 @@ section h1{
 .formula select{
     font-size: 1.2rem;
     color: darkblue;
+    border-radius: 0.5rem;
 }
 
 
@@ -535,6 +536,24 @@ section h1{
     background-color: rgba(141, 141, 221, 0.575);
 }
 
+.hipercalemia, .hipocalemia{
+    max-width: 95vw;
+    justify-items: center;
+    align-items: center;
+    font-size: 1.0rem;
+    margin-top: -1rem;
+    height: auto;
+}
+
+.hipercalemia ul li{
+    list-style-type: disc;
+    margin-left: 1rem;
+}
+
+.hipocalemia li{
+    list-style-type: disc;
+    margin-bottom: 1rem;
+}
 
 
 
@@ -938,4 +957,15 @@ section h1{
         width: 0rem;
         height: 0rem;
     }
+
+    h1{
+        font-size: 1.2rem;
+    }
+   
+    .glasgow{
+        padding: 0.8rem;
+        font-size: 1.0rem;
+     }
+    
+   
 }
