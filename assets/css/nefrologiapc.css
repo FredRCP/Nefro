@@ -540,7 +540,7 @@ section h1{
     max-width: 95vw;
     justify-items: center;
     align-items: center;
-    font-size: 1.0rem;
+    font-size: 1.1rem;
     margin-top: -1rem;
     height: auto;
 }
@@ -550,9 +550,13 @@ section h1{
     margin-left: 1rem;
 }
 
-.hipocalemia li{
-    list-style-type: disc;
+.hipocalemia li{   
     margin-bottom: 1rem;
+}
+
+.hipocalemia ul li{
+    list-style-type: disc;
+    margin-left: 1rem;
 }
 
 
@@ -966,6 +970,9 @@ section h1{
         padding: 0.8rem;
         font-size: 1.0rem;
      }
+     
+     .hipercalemia, .hipocalemia{
+        font-size: 1.0rem;   
+    }
     
-   
 }
