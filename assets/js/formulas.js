@@ -295,7 +295,7 @@ function repobic(){
     if(!pesorep || !base) {return document.querySelector("#resultadoformula").innerHTML="preencha todos os dados"}
     let repobic= pesorep*0.3*base;
     document.querySelector('#resultadoformula').innerHTML= "<h5>"+"Reposição com Bicarbonato de Sódio 8,4%:"
-    + "<br>" + repobic/3 + "ml a cada 8h EV" + "<br>" + "ou" + "<br>" + "empiricamente "
+    + "<br>" + Math.abs(repobic)/3 + "ml a cada 8h EV" + "<br>" + "ou" + "<br>" + "empiricamente "
     + pesorep + 'ml a cada 8h EV';
 }
 
