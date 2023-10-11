@@ -1,3 +1,2 @@
 # RCP
-Aprendendo
-Olá, td bem? Esse sou eu aprendendo!
+Website voltado para auxílio no atendimento de pacientes em geral
