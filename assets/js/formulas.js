@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const div15=document.querySelector('#ag');
         const div16=document.querySelector('#ist');
         const div17=document.querySelector('#glasgow');
+        const div18=document.querySelector('#mckg');
 
         div1.style.display="none";
         div2.style.display="none";
@@ -47,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
         div15.style.display="none";
         div16.style.display="none";
         div17.style.display="none";
+        div18.style.display="none";
         
         if (selectedOption === 'nada') {
             div1.style.display = 'block';
@@ -70,7 +72,8 @@ document.addEventListener("DOMContentLoaded", function() {
             if(ok===123){div9.style.display = 'block';
             window.open('hiponatremia.html', '_target');
         } 
-            else{alert('solicite a senha de acesso')}
+            else{alert('solicite a senha de acesso'); 
+            document.querySelector("#resultadoformula").innerHTML="Adquira a senha de acesso.";}
         } else if (selectedOption === 'osmolaridade') {
             div10.style.display = 'block'
         } else if (selectedOption === 'imc') {
@@ -89,6 +92,8 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (selectedOption === 'glasgow') {
             div17.style.display = 'grid'
             glasgow();
+        } else if (selectedOption === 'mckg') {
+            div18.style.display = 'block'
         }
         
     });
@@ -115,6 +120,10 @@ function limparformula(){
     document.querySelector('#base').value='';
     document.querySelector('#ferro').value='';
     document.querySelector('#tibc').value='';
+    document.querySelector('#infusao').value='';
+    document.querySelector('#pesoml').value='';
+    document.querySelector('#soro').value='';
+    document.querySelector('#dosagem').value='';
 }
 
 
@@ -403,6 +412,25 @@ function glasgow(){
     let glasgow= ao + rm + rv;
     if(ao&&rm&&rv){
     document.querySelector('#resultadoformula').innerHTML= "<h5>"+ "Glasgow: " + glasgow;}
+}
+
+//CONVERTER ML/H EM MCG/KG/MIN
+
+function mckg(){
+   
+    let infusao= document.querySelector('#infusao').value
+    infusao=Number(infusao)
+    let pesoml=document.querySelector('#pesoml').value
+    pesoml=Number(pesoml)
+    let soro=document.querySelector('#soro').value
+    soro=Number(soro)
+    let dosagem=document.querySelector('#dosagem').value
+    dosagem=Number(dosagem)
+    if(!infusao || !pesoml || !soro || !dosagem) {return document.querySelector("#resultadoformula").innerHTML="preencha todos os dados"}
+    let mckg= (infusao*dosagem*1000)/(soro*pesoml*60);
+    mckg= mckg.toFixed(2);
+
+    document.querySelector('#resultadoformula').innerHTML= "<h5>"+ mckg + 'mcg/kg/min';
 }
 
 
