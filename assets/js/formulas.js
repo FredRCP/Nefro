@@ -83,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (selectedOption === 'calculadora') {
             div13.style.display = 'block';
             limparcalculadora();
+            
         } else if (selectedOption === 'pfr') {
             div14.style.display = 'block'
         } else if (selectedOption === 'ag') {
@@ -303,6 +304,30 @@ function repobic(){
 let n1="0";
 let operacao=null;
 let n2="";
+
+
+document.addEventListener('keydown', function(event) {
+    document.querySelector('.mais').focus();
+    const tp = event.key;
+    console.log(tp);
+     
+    // Verifique se a tecla pressionada é um número (0-9)
+    if (!isNaN(tp) && tp !== ' ') {
+        incluirDigito(tp);
+    } else
+
+    if(tp==='+' || tp==="-" || tp==='*' || tp==="/"){
+        iniciarCalculo(tp)
+    } else
+
+    if(tp==='='){finalizarCalculo()} else
+
+    if(tp==='%'){obterPorcento()} else
+
+    if(tp===','){incluirPonto()} else
+
+    if(tp==='Delete'){limparcalculadora()}
+});
         
         function incluirDigito(digito){
             if(n2&&operacao&&clicadoigual){
@@ -429,14 +454,6 @@ function mckg(){
     if(!infusao || !pesoml || !soro || !dosagem) {return document.querySelector("#resultadoformula").innerHTML="preencha todos os dados"}
     let mckg= (infusao*dosagem*1000)/(soro*pesoml*60);
     mckg= mckg.toFixed(2);
-
     document.querySelector('#resultadoformula').innerHTML= "<h5>"+ mckg + 'mcg/kg/min';
 }
-
-
-
-
-
-    
-
 
