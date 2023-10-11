@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (selectedOption === 'calculadora') {
             div13.style.display = 'block';
             limparcalculadora();
-            
+           limparformula();            
         } else if (selectedOption === 'pfr') {
             div14.style.display = 'block'
         } else if (selectedOption === 'ag') {
