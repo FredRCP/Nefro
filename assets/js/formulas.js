@@ -479,11 +479,17 @@ function clcrped(){
             break;
         case 'cri': k=0.55;
             break;
+        case 'crim': k=0.7;
+            break;
         default:
             break;
     }
     if(!altura || !creatinina || !k) {return document.querySelector("#resultadoformula").innerHTML="preencha todos os dados"}
     let clcrped= ((altura*k)/creatinina).toFixed(2);
     document.querySelector('#resultadoformula').innerHTML= "<h5>"+ clcrped + 'ml/min/1,73m2';
+}
+
+function referencia(){
+    alert('em contrução')
 }
 
