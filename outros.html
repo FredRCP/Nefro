@@ -10,6 +10,7 @@
                 <option value="ac">calcular água corporal</option>
                 <option value="ag">calcular ânion gap</option>
                 <option value="calculadora">calculadora</option>
+                <option value="clcrped">clearance de creatinina em pediatria</option>
                 <option value="mckg">converter ml/hora em mcg/kg/min</option>
                 <option value="heparina">dosagem de heparina na hemodiálise</option>
                 <option value="fena">fração de excreção de sódio</option>
@@ -336,6 +337,19 @@
                     <input type="number" placeholder="ml" id="soro">
                     <div>
                         <button onclick="mckg()">Calcular</button>
+                        <button onclick="limparformula()">Limpar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="clcrped" style="display: none;">
+                <div class="dentro">
+                    <label for="alturaped">Altura</label>
+                    <input type="number" placeholder="cm" id="alturaped">
+                    <label for="crped">Creatinina sérica</label>
+                    <input type="number" placeholder="mg/dl" id="crped">
+                    <div>
+                        <button onclick="clcrped()">Calcular clcr</button>
                         <button onclick="limparformula()">Limpar</button>
                     </div>
                 </div>
