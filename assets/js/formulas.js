@@ -468,6 +468,7 @@ function clcrped(){
     altura= Number(altura);
     let creatinina = document.querySelector('#crped').value;
     creatinina= Number(creatinina);
+    if(!altura || !creatinina) {return document.querySelector("#resultadoformula").innerHTML="preencha todos os dados"}
     let clcrped= ((altura*0.55)/creatinina).toFixed(2);
     document.querySelector('#resultadoformula').innerHTML= "<h5>"+ clcrped + 'ml/min/1,73m2';
 }
