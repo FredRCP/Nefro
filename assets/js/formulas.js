@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const div16=document.querySelector('#ist');
         const div17=document.querySelector('#glasgow');
         const div18=document.querySelector('#mckg');
+        const div19=document.querySelector('#clcrped');
 
         div1.style.display="none";
         div2.style.display="none";
@@ -49,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
         div16.style.display="none";
         div17.style.display="none";
         div18.style.display="none";
+        div19.style.display="none";
         
         if (selectedOption === 'nada') {
             div1.style.display = 'block';
@@ -83,7 +85,8 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (selectedOption === 'calculadora') {
             div13.style.display = 'block';
             limparcalculadora();
-           limparformula();            
+            limparformula();
+            
         } else if (selectedOption === 'pfr') {
             div14.style.display = 'block'
         } else if (selectedOption === 'ag') {
@@ -95,6 +98,8 @@ document.addEventListener("DOMContentLoaded", function() {
             glasgow();
         } else if (selectedOption === 'mckg') {
             div18.style.display = 'block'
+        } else if (selectedOption === 'clcrped') {
+            div19.style.display = 'block'
         }
         
     });
@@ -191,7 +196,6 @@ function ac(){
     }
     document.querySelector('#resultadoformula').innerHTML= "<h5>"+'A água corporal estimada é: '+ad+"litros";    
 }
-
 
 
 //HIDRATAÇÃO ORAL
@@ -295,7 +299,7 @@ function repobic(){
     if(!pesorep || !base) {return document.querySelector("#resultadoformula").innerHTML="preencha todos os dados"}
     let repobic= pesorep*0.3*base;
     document.querySelector('#resultadoformula').innerHTML= "<h5>"+"Reposição com Bicarbonato de Sódio 8,4%:"
-    + "<br>" + Math.abs(repobic)/3 + "ml a cada 8h EV" + "<br>" + "ou" + "<br>" + "empiricamente "
+    + "<br>" + (Math.abs(repobic)/3).toFixed(1) + "ml a cada 8h EV" + "<br>" + "ou" + "<br>" + "empiricamente "
     + pesorep + 'ml a cada 8h EV';
 }
 
@@ -455,5 +459,14 @@ function mckg(){
     let mckg= (infusao*dosagem*1000)/(soro*pesoml*60);
     mckg= mckg.toFixed(2);
     document.querySelector('#resultadoformula').innerHTML= "<h5>"+ mckg + 'mcg/kg/min';
+}
+
+function clcrped(){
+    let altura= document.querySelector('#alturaped').value;
+    altura= Number(altura);
+    let creatinina = document.querySelector('#crped').value;
+    creatinina= Number(creatinina);
+    let clcrped= ((altura*0.55)/creatinina).toFixed(2);
+    document.querySelector('#resultadoformula').innerHTML= "<h5>"+ clcrped + 'ml/min/1,73m2';
 }
 
