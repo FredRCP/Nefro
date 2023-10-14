@@ -348,18 +348,19 @@
                     <input type="number" placeholder="cm" id="alturaped">
                     <label for="crped">Creatinina sérica</label>
                     <input type="number" placeholder="mg/dl" id="crped"><br>
-                    <select style="text-align: center; font-size: 1.0rem; margin-top: 0.5rem; background-color: whitesmoke;"  name="idadep" id="idadep">
+                    <select style="text-align: center; font-size: 1.0rem; margin-top: 0.5rem; background-color: white;"  name="idadep" id="idadep">
                         <option value="nada">Selecione a idade</option>
                         <option value="ptmbp">Prematuro muito baixo peso (P&lt;1500g)</option>
                         <option value="ptbp">prematuro baixo peso (P>1500g e P&lt;2500g)</option>
-                        <option value="rnt">recém nascido a termo</option>
-                        <option value="cri">criança > 1 mês</option>
-                        
+                        <option value="rnt">recém nascido a termo até 2 anos</option>
+                        <option value="cri">criança > 2 anos e adolescentes ♀</option>
+                        <option value="crim">adolescentes ♂</option>
                     </select>
                     
                     <div>
                         <button onclick="clcrped()">Calcular clcr</button>
                         <button onclick="limparformula()">Limpar</button>
+                        <button onclick="referencia()">Referência para RN</button>
                     </div>
                 </div>
             </div>
