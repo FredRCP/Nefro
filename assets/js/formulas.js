@@ -468,8 +468,22 @@ function clcrped(){
     altura= Number(altura);
     let creatinina = document.querySelector('#crped').value;
     creatinina= Number(creatinina);
-    if(!altura || !creatinina) {return document.querySelector("#resultadoformula").innerHTML="preencha todos os dados"}
-    let clcrped= ((altura*0.55)/creatinina).toFixed(2);
+    let select= document.getElementById('idadep').value;
+    let k='';
+    switch (select) {
+        case 'ptmbp': k=0.29;
+            break;
+        case 'ptbp': k=0.33;
+            break;
+        case 'rnt': k=0.45;
+            break;
+        case 'cri': k=0.55;
+            break;
+        default:
+            break;
+    }
+    if(!altura || !creatinina || !k) {return document.querySelector("#resultadoformula").innerHTML="preencha todos os dados"}
+    let clcrped= ((altura*k)/creatinina).toFixed(2);
     document.querySelector('#resultadoformula').innerHTML= "<h5>"+ clcrped + 'ml/min/1,73m2';
 }
 
