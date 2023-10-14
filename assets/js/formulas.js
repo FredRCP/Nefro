@@ -130,6 +130,8 @@ function limparformula(){
     document.querySelector('#pesoml').value='';
     document.querySelector('#soro').value='';
     document.querySelector('#dosagem').value='';
+    document.querySelector('#alturaped').value='';
+    document.querySelector('#crped').value='';
 }
 
 
