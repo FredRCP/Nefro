@@ -99,13 +99,14 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (selectedOption === 'mckg') {
             div18.style.display = 'block'
         } else if (selectedOption === 'clcrped') {
-            div19.style.display = 'block'
+            div19.style.display = 'block';
+            jasim=false;
         }
         
     });
 
 });
-
+let jasim=false;
 function limparformula(){
     document.querySelector("#resultadoformula").innerHTML="";
     document.querySelector('#pesoimc').value='';
@@ -132,6 +133,7 @@ function limparformula(){
     document.querySelector('#dosagem').value='';
     document.querySelector('#alturaped').value='';
     document.querySelector('#crped').value='';
+    jasim=false;
 }
 
 
@@ -315,7 +317,6 @@ let n2="";
 document.addEventListener('keydown', function(event) {
     document.querySelector('.mais').focus();
     const tp = event.key;
-    console.log(tp);
      
     // Verifique se a tecla pressionada é um número (0-9)
     if (!isNaN(tp) && tp !== ' ') {
@@ -464,6 +465,7 @@ function mckg(){
 }
 
 function clcrped(){
+    jasim=false;
     let altura= document.querySelector('#alturaped').value;
     altura= Number(altura);
     let creatinina = document.querySelector('#crped').value;
@@ -490,6 +492,13 @@ function clcrped(){
 }
 
 function referencia(){
-    alert('em contrução')
+    document.querySelector("#resultadoformula").innerHTML="";
+    if(jasim){return jasim=false}
+    const clcrrn=document.createElement('img');
+    clcrrn.src= '/assets/image/clcrrn.png';
+    const diva= document.querySelector('#resultadoformula');
+    clcrrn.classList.add('clcrrn');
+    diva.appendChild(clcrrn);
+    jasim=true;
 }
 
