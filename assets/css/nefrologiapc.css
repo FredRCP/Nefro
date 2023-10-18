@@ -769,6 +769,12 @@ section h1{
     .hipocalemia, .hipercalemia{
         font-size: 1rem;
     }
+
+
+    .clcrrn{
+        max-width: 500px;
+        height: 220px;
+    }
 }
 
 @media(max-width: 720px){
@@ -989,11 +995,11 @@ section h1{
         font-size: 0.8rem;   
     }
 
-     .clcrrn{
+    .clcrrn{
         max-width: 340px;
         margin-left: -2rem;
         height: 300px;
     }
-    
+ 
    
 }

@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const div17=document.querySelector('#glasgow');
         const div18=document.querySelector('#mckg');
         const div19=document.querySelector('#clcrped');
+        const div20=document.querySelector('#ingestasal');
 
         div1.style.display="none";
         div2.style.display="none";
@@ -51,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
         div17.style.display="none";
         div18.style.display="none";
         div19.style.display="none";
+        div20.style.display="none";
         
         if (selectedOption === 'nada') {
             div1.style.display = 'block';
@@ -101,6 +103,8 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (selectedOption === 'clcrped') {
             div19.style.display = 'block';
             jasim=false;
+        } else if (selectedOption === 'ingestasal') {
+            div20.style.display = 'block'
         }
         
     });
@@ -133,6 +137,7 @@ function limparformula(){
     document.querySelector('#dosagem').value='';
     document.querySelector('#alturaped').value='';
     document.querySelector('#crped').value='';
+    document.querySelector('#sal').value='';
     jasim=false;
 }
 
@@ -317,6 +322,7 @@ let n2="";
 document.addEventListener('keydown', function(event) {
     document.querySelector('.mais').focus();
     const tp = event.key;
+    console.log(tp);
      
     // Verifique se a tecla pressionada é um número (0-9)
     if (!isNaN(tp) && tp !== ' ') {
@@ -501,4 +507,17 @@ function referencia(){
     diva.appendChild(clcrrn);
     jasim=true;
 }
+
+//INGESTÃO DE SÓDIO
+
+function ingestasal(){
+    let natriuria= document.querySelector("#sal").value;
+    if(!natriuria) {return document.querySelector("#resultadoformula").innerHTML="preencha todos os dados"}
+    let ingestasal= natriuria/17
+    ingestasal= Number(ingestasal.toFixed(1));
+    
+    document.querySelector("#resultadoformula").innerHTML="O valor ingerido de NaCl é de aproximadamente " + ingestasal + " gramas ao dia."
+    
+}
+
 
