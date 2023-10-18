@@ -7,8 +7,8 @@
             <select class="select" name="qual" id="fqual">
                 <option style="text-align: center;" value="nada">Escolha o tema</option>
                 <option value=""></option>
-                <option value="ac">calcular água corporal</option>
-                <option value="ag">calcular ânion gap</option>
+                <option value="ac">água corporal</option>
+                <option value="ag">ânion gap</option>
                 <option value="calculadora">calculadora</option>
                 <option value="clcrped">clearance de creatinina em pediatria</option>
                 <option value="mckg">converter ml/hora em mcg/kg/min</option>
@@ -23,6 +23,7 @@
                 <option value="hiponatremia">hiponatremia (necessário senha de acesso)</option>
                 <option value="imc">índice de massa corporal (IMC)</option>
                 <option value="ist">índice de saturação de transferrina</option>
+                <option value="ingestasal">ingestão diária de NaCl</option>
                 <option value="osmolaridade">osmolaridade sérica</option>
                 <option value="bic">reposição de bicarbonato</option>
                 <option value=""></option>
@@ -362,6 +363,26 @@
                         <button onclick="limparformula()">Limpar</button>
                         <button onclick="referencia()">Referência para RN</button>
                     </div>
+                </div>
+            </div>
+
+
+            <div id="modelo" style="display: none;">
+                <div class="dentro">
+                    
+                </div>
+            </div>
+
+
+            <div id="ingestasal" style="display: none;">
+                <div class="dentro">
+                    <label for="sal">Sódio urinário em 24h</label>
+                    <input type="number" placeholder="mEq/l" id="sal">
+                    <div>
+                        <button onclick="ingestasal()">Calcular</button>
+                        <button onclick="limparformula()">Limpar</button>
+                    </div>
+                </div>
                 </div>
             </div>
 
