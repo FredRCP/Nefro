@@ -32,6 +32,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const div18=document.querySelector('#mckg');
         const div19=document.querySelector('#clcrped');
         const div20=document.querySelector('#ingestasal');
+        const div21=document.querySelector('#kfre');
+        const div22=document.querySelector('#cvvhdf');
+
 
         div1.style.display="none";
         div2.style.display="none";
@@ -53,6 +56,9 @@ document.addEventListener("DOMContentLoaded", function() {
         div18.style.display="none";
         div19.style.display="none";
         div20.style.display="none";
+        div21.style.display="none";
+        div22.style.display="none";
+
         
         if (selectedOption === 'nada') {
             div1.style.display = 'block';
@@ -105,6 +111,10 @@ document.addEventListener("DOMContentLoaded", function() {
             jasim=false;
         } else if (selectedOption === 'ingestasal') {
             div20.style.display = 'block'
+        } else if (selectedOption === 'kfre') {
+            div21.style.display = 'block'
+        } else if (selectedOption === 'cvvhdf') {
+            div22.style.display = 'block'
         }
         
     });
