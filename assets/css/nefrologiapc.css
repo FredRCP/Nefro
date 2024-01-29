@@ -550,6 +550,12 @@ section h1{
     height: auto;
 }
 
+.cvvhdf{
+    background-image: url('/assets/image/cvvhdf.jpeg');
+    width: 540px;
+    height: 760px;
+}
+
 .hipercalemia ul li{
     list-style-type: disc;
     margin-left: 1rem;
