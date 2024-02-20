@@ -34,6 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const div20=document.querySelector('#ingestasal');
         const div21=document.querySelector('#kfre');
         const div22=document.querySelector('#cvvhdf');
+        const div23=document.querySelector('#dab');
+
 
 
         div1.style.display="none";
@@ -58,6 +60,8 @@ document.addEventListener("DOMContentLoaded", function() {
         div20.style.display="none";
         div21.style.display="none";
         div22.style.display="none";
+        div23.style.display="none";
+
 
         
         if (selectedOption === 'nada') {
@@ -115,6 +119,8 @@ document.addEventListener("DOMContentLoaded", function() {
             div21.style.display = 'block'
         } else if (selectedOption === 'cvvhdf') {
             div22.style.display = 'block'
+        } else if (selectedOption === 'dab') {
+            div23.style.display = 'block'
         }
         
     });
