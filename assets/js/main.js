@@ -504,6 +504,10 @@ function calcularckd(){
         break;
         case "trayenta": dose="5mg ao dia, não precisa de ajuste"
         break;
+        case "galvus": if(clcr>=50){dose="50 a 100mg/dia"} else{dose="50mg ao dia, usar com cautela."}
+        break;
+        case "vildagliptina": if(clcr>=50){dose="50 a 100mg/dia"} else{dose="50mg ao dia, usar com cautela."}
+        break;
         case "xarelto": if(clcr>50){dose="Dose habitual"} else if(clcr<=50&&clcr>=30){dose="15mg ao dia; se uso para TVP/TEP, 15mg 12/12h por 3 semanas e após 15-20mg/dia"}
         else if(clcr<30&&clcr>15){dose="15mg ao dia, usar com cautela; se uso para TVP/TEP, 15mg 12/12h por 3 semanas e após 15-20mg/dia"} else{dose="Evitar"}
         break;   
