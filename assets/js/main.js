@@ -462,6 +462,9 @@ function calcularckd(){
         case "enoxaparina": if(clcr>30){dose="dose habitual"} else if(clcr<=30&&clcr>=15){dose="administrar 50% da dose; se para trombofilaxia: 20mg/dia."} 
         else {dose="administrar 50% da dose; se para trombofilaxia: 20mg/dia; se possível evitar a medicação e avaliar outra opção."}
         break;
+        case "clexane": if(clcr>30){dose="dose habitual"} else if(clcr<=30&&clcr>=15){dose="administrar 50% da dose; se para trombofilaxia: 20mg/dia."} 
+        else {dose="administrar 50% da dose; se para trombofilaxia: 20mg/dia; se possível evitar a medicação e avaliar outra opção."}
+        break;
         case "evoglipitina": if(clcr>60){dose="5mg ao dia"} else if(clcr<60&&clcr>10){dose=" não precisa de ajuste, usar com cautela."} else{dose="não há dados comprovando segurança no seu uso"}
         case "ezetimibe": dose="10mg ao dia, não precisa de ajuste."
         break;
