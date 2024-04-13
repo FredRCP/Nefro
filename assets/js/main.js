@@ -276,15 +276,14 @@ function calcularckd(){
         break;
         case "pentamidina": if(clcr>=10){dose="4mg/kg ao dia"} else{dose="4mg/kg a cada 24h a 36h; sem em hemodiálise, 4mg/kg a cada 48h com dose extra após"}
         break;
-        case "pirazinamida": if(clcr>=10){dose="25mg/kg/dia, dose máxima de 2,5g ao dia"} else{dose="12-25mg/kg/dia"}
-        break;
-        case "polimixina b": dose="15.000UI/kg/dia dividida em 2 tomadas, a correção para função  renal é controversa"
-        break;
-        case "rifampicina": if(clcr>50){dose="600 mg a cada 24h"} else{dose="300-600mg a cada 24h"}
+        case "polimixina b": if(clcr>90){dose= "25.000UI/kg 12/12h EV"} else if(clcr<=90&&clcr>10){dose="15.000UI/kg 12/12h EV"} else{dose="15.000UI/kg 12/12h EV; Para pacientes em diálise, a dose é controversa."}
         break;
         case "secnidazol": dose= "dose habitual, correção para função renal ainda controversa"
         break;
         case "Sulfametoxazol-Trimetoprim": if(clcr>=30){dose="5-20 mg/kg/dia, dividir em 2, 3 ou 4 tomadas"} else if(clcr<30&&clcr>=10){dose="5-10 mg/kg/dia de 12/12h"} 
+        else if(clcr<10){dose="evitar, mas se optar por usar,  5-10mg/kg a cada 24h"}
+        break;
+        case "bactrim": if(clcr>=30){dose="5-20 mg/kg/dia, dividir em 2, 3 ou 4 tomadas"} else if(clcr<30&&clcr>=10){dose="5-10 mg/kg/dia de 12/12h"} 
         else if(clcr<10){dose="evitar, mas se optar por usar,  5-10mg/kg a cada 24h"}
         break;
         case "tazocin": if(clcr>50){dose="4,5g de 8/8h a 6/6h"} else if(clcr<=50&&clcr>=20){dose="2,25g de 6/6h"} else if(clcr<20){dose="2,25g de 8/8h"}
@@ -332,15 +331,15 @@ function calcularckd(){
         break;
         case "dtg-rpv": if(clcr>0){dose="1cp ao dia, não precisa de ajuste; poucos dados a respeito de TRS"}
         break;
-        case "rpv-ftc-taf": if(clcr>=30){dose="1cp ao dia"} else{dose="evitar a medicação; não usar em TRS"}
+        case "rpv/ftc/taf": if(clcr>=30){dose="1cp ao dia"} else{dose="evitar a medicação; não usar em TRS"}
         break;
         case "drv/cobi": if(clcr>50){dose="1cp ao dia, não precisa de ajuste, nem para TRS"}
         break;
-        case "efv-3tc-tdf": if(clcr>50){dose="1cp ao dia"} else{dose="evitar a medicação, não usar em TRS"}
+        case "efv/3tc/tdf": if(clcr>50){dose="1cp ao dia"} else{dose="evitar a medicação, não usar em TRS"}
         break;
-        case "efv-3tc-tdf-cobi": if(clcr>=70){dose="1cp ao dia"} else{dose="evitar a medicação, não usar em TRS"}
+        case "efv/3tc/tdf/cobi": if(clcr>=70){dose="1cp ao dia"} else{dose="evitar a medicação, não usar em TRS"}
         break;
-        case "drv-cobi-ftc-taf": if(clcr>=30){dose="1cp ao dia"} else{dose="evitar a medicação, não usar em TRS"}
+        case "drv/cobi/ftc/taf": if(clcr>=30){dose="1cp ao dia"} else{dose="evitar a medicação, não usar em TRS"}
         break;
         case "dtg/abc/3tc": if(clcr>50){dose="1cp ao dia"} else{dose="evitar a medicação, não usar em TRS"}
         break;
@@ -558,8 +557,30 @@ function link(){
     function limparformula(){
         document.querySelector("#resultadoformula").innerHTML=""
     }
+
+
+
+    const todosmedicamentos=[
+        "aciclovir", "albendazol", "amicacina", "amoxacilina", "amoxicilina", "amoxicilina-clavulanato", "ampicilina", "anfotericina b", "annita", "azitromicina",
+        "cefalexina", "cefazolina", "ceftriaxone", "cefepime", "ceftazidime", "cefuroxime", "cidofovir", "ciprofloxacino", "clavulin", "clindamicina", "claritromicina",
+        "colchicina", "colistina", "dalbavancina", "dapsona", "daptomicina", "doripenem", "doxiciclina", "ertapenem", "fosfomicina", "fluconazol", "ganciclovir",
+        "gatifloxacino", "gentamicina", "imipenem", "isoniazida", "itraconazol", "ivermectina", "levofloxacino", "linezolida", "mebendazol", "meropenem", "metronidazol",
+        "nitazoxanida", "nitrofurantoína", "norfloxacino", "ofloxacino", "penicilina G", "pentamidina", "pirazinamida", "polimixina b", "rifampicina", "secnidazol",
+        "sulfametoxazol-trimetoprim", "bactrim", "tazocin", "piperacilina-tazobactam", "teicoplamina", "tetraciclina", "tobramicina", "vancomicina", "estreptomicina",
+        "etionamida", "rifabutina", "ftc-tdf", "3tc/zdv", "rpv/ftc/tdf", "ftc/taf", "3tc/ral", "abc/3tc", "atv/cobi", "elv/ftc/taf/cobi", "dtg/rpv", "rpv/ftc/taf",
+        "efv/3tc/tdf", "efv/3tc/tdf/cobi", "drv/cobi/ftc/taf", "dtg/abc/3tc", "abc/3tc/zdv", "adefovir", "cidofovir", "dataclasvir", "entecavir", "lamivudina",
+        "oseltamivir", "ribavirina", "simeprevir", "sofosbuvir", "tamiflu", "telbivudina", "tenofovir", "amitriptilina", "citalopram", "codeína", "dipirona", "duloxetina",
+        "escitalopram", "gabapentina", "melatonina", "metadona", "mirtazapina", "nortriptilina", "paracetamol", "pregabalina", "quetiapina", "trazodona",
+        "venlafaxina", "youtube", "twitter", "zap retard", "alogliptina", "alopurinol", "amiodarona", "apixabana", "atorvastatina", "canagliflozina", "carbamazepina",
+        "cinarizina", "ciprofibrato", "colestiramina", "dapagliflozina", "desloratadina", "domperidona", "doxazosina", "dudasterida", "eliquis", "empagliflozina",
+        "enoxaparina", "clexane", "evoglipitina", "ezetimibe", "gliclazida", "glimepirida", "glipizida", "glibenclamida", "hidroxicloroquina", "linagliptina",
+        "liraglutida", "metformina", "montelucaste", "olanzapina", "pioglitazona", "repaglinida", "rivaroxabana", "rosuvastatina", "sinvastatina", "trayenta",
+        "galvus", "vildagliptina", "xareto"
+    ];
+    
+    
+
+
     
 
    
-
-    
