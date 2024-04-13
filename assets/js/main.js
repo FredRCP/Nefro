@@ -180,6 +180,8 @@ function calcularckd(){
         break;
         case "azitromicina": dose="500mg a cada 24h, não precisa de correção para a função renal"
         break;
+        case "caspofungina": dose="70mg dose de ataque, após 50mg a cada 24h; não precisa de correção para função renal."
+        break;
         case "cefalexina": if(clcr>20){dose="500mg de 6/6h, via oral"} else{dose= "500mg de 8/8h a 12/12h, via oral"}
         break;
         case "cefazolina": if(clcr>50){dose="1 a 2g de 8/8h"} else if(clcr<=50&&clcr>=10){dose="1 a 2g de 12/12h"} else if(clcr<10){dose="1 a 2g a cada 24/48h"}
@@ -262,6 +264,8 @@ function calcularckd(){
         else if(clcr<10){dose="500mg a cada 24h; se em HD, dose extra após; se em HD contínua, 1g de 12/12h"}
         break;
         case "metronidazol": if(clcr>50){dose="500mg de 8/8h"} else if(clcr<=50&&clcr>=10){dose="500mg de 12/12h"} else if(clcr<10){dose="250mg de 8/8h"}
+        break;
+        case "micafungina": dose="100mg a cada 24h; não precisa de correção para função renal."
         break;
         case "nitazoxanida": dose="500mg de 12/12h, faltam dados mais precisos para ajuste conforme função renal"
         break;
