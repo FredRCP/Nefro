@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const div21=document.querySelector('#kfre');
         const div22=document.querySelector('#cvvhdf');
         const div23=document.querySelector('#dab');
+        const div24=document.querySelector('#cacor');
 
 
 
@@ -61,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
         div21.style.display="none";
         div22.style.display="none";
         div23.style.display="none";
+        div24.style.display="none";
 
 
         
@@ -121,6 +123,8 @@ document.addEventListener("DOMContentLoaded", function() {
             div22.style.display = 'block'
         } else if (selectedOption === 'dab') {
             div23.style.display = 'block'
+        } else if (selectedOption === 'cacor') {
+            div24.style.display = 'block'
         }
         
     });
@@ -154,6 +158,8 @@ function limparformula(){
     document.querySelector('#alturaped').value='';
     document.querySelector('#crped').value='';
     document.querySelector('#sal').value='';
+    document.querySelector('#catotal').value='';
+    document.querySelector('#albumina').value='';
     jasim=false;
 }
 
@@ -176,6 +182,18 @@ function imc(){
     if(resultadoimc>34.9&&resultadoimc<=39.9){texto= '<u>' +'OBESIDADE GRAU 2'+'</u>' + ': procure ajuda!'}
     else{texto='<u>'+'OBESIDADE GRAU 3'+'</u>'+ ': procure ajuda urgente!'}}}}}
     document.querySelector('#resultadoformula').innerHTML= "<h5>"+'Seu IMC é: '+resultadoimc+"Kg/m²"+ "<br>" + texto;
+}
+
+//AJUSTE DE CÁLCIO PARA ALBUMINA SÉRICA
+
+function caajuste(){
+    let catotal= document.querySelector('#catotal').value
+    catotal=Number(catotal)
+    let albumina=document.querySelector('#albumina').value
+    albumina=Number(albumina)
+    let caajustado= catotal + 0.8*(4-albumina);
+    if(albumina>4){return document.querySelector('#resultadoformula').innerHTML= "<h5>"+'Não é necessária correção, nível normal de albumina'+ "<br>";}
+    document.querySelector('#resultadoformula').innerHTML= "<h5>"+'Cálcio ajustado: '+caajustado+"mg/dl"+ "<br>";
 }
 
 //OSMOLARIDADE
