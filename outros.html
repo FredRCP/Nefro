@@ -9,6 +9,7 @@
                 <option value=""></option>
                 <option value="ac">água corporal</option>
                 <option value="ag">ânion gap</option>
+                <option value="cacor">cálcio, correção para albumina</option>
                 <option value="calculadora">calculadora</option>
                 <option value="clcrped">clearance de creatinina em pediatria</option>
                 <option value="mckg">converter ml/hora em mcg/kg/min</option>
@@ -69,6 +70,19 @@
                     <div>
                     <button onclick="ag()">Ânion gap</button>
                     <button onclick="limparformula()">Limpar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cacor" style="display: none;">
+                <div class="dentro">
+                    <label for="catotal">Cálcio total</label>
+                    <input type="number" placeholder="mg/dl" id="catotal">
+                    <label for="albumina">Albumina</label>
+                    <input type="number" placeholder="g/dl" id="albumina">
+                    <div>
+                        <button onclick="caajuste()">Cálcio ajustado</button>
+                        <button onclick="limparformula()">Limpar</button>
                     </div>
                 </div>
             </div>
@@ -338,7 +352,7 @@
                     <input type="number" placeholder="kg" id="pesoml">
                     <label for="dosagem">Dosagem da medicação na solução</label>
                     <input type="number" placeholder="mg" id="dosagem">
-                    <label for="soro">Volume de soro</label>
+                    <label for="soro">Volume da solução</label>
                     <input type="number" placeholder="ml" id="soro">
                     <div>
                         <button onclick="mckg()">Calcular</button>
@@ -393,7 +407,7 @@
 
             <div id="kfre" style="display: none;">
                 <div class="dentro">
-                    <h3 onclick="site_kfre()" title="clique" style="cursor: pointer;" target="_blank">Calculadora KFRE</h3>
+                    <a href="https://kidneyfailurerisk.com/" title="clique" style="cursor: pointer; text-decoration: none;" target="_blank">Calculadora KFRE</a>
                 </div>
             </div>
 
@@ -409,6 +423,45 @@
                 <div class="dentro">
                     <img class="dab" src="/assets/image/dab.jpeg" alt="" srcset="">
                 </div>
+                <div class="dentro dabs">
+                <div class="dabs1">
+                    <h3>Acidose Metabólica</h3>
+                    <label for="dabs1">Bic</label><br>
+                    <input type="number" name="" id="dabs1">
+                    <p class="respostadabs1">PCO2 esperada:</p>
+                </div>
+                <div class="dabs2">
+                    <h3>Alcalose Metabólica</h3>
+                    <label for="dabs2">Bic</label><br>
+                    <input type="number" name="" id="dabs2">
+                    <p class="respostadabs2">PCO2 esperada:</p>
+                </div>
+                <div class="dabs3">
+                    <h3>Acidose Respiratória Aguda</h3>
+                    <label for="dabs3">PCO2</label><br>
+                    <input type="number" name="" id="dabs3">
+                    <p class="respostadabs3">BIC esperada:</p>
+                </div>
+                <div class="dabs4">
+                    <h3>Acidose Respiratória Crônica</h3>
+                    <label for="dabs4">PCO2</label><br>
+                    <input type="number" name="" id="dabs4">
+                    <p class="respostadabs4">BIC esperada:</p>
+                </div>
+                <div class="dabs5">
+                    <h3>Alcalose Respiratória Aguda</h3>
+                    <label for="dabs5">PCO2</label><br>
+                    <input type="number" name="" id="dabs5">
+                    <p class="respostadabs5">BIC esperada:</p>
+                </div>
+                <div class="dabs6">
+                    <h3>Acidose Respiratória Crônica</h3>
+                    <label for="dabs6">PCO2</label><br>
+                    <input type="number" name="" id="dabs6">
+                    <p class="respostadabs6">BIC esperada:</p>
+                </div>
+                </div>
+
             </div>
 
 
