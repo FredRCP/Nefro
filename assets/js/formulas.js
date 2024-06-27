@@ -191,6 +191,7 @@ function caajuste(){
     catotal=Number(catotal)
     let albumina=document.querySelector('#albumina').value
     albumina=Number(albumina)
+    if(!catotal || !albumina) {return document.querySelector("#resultadoformula").innerHTML="preencha todos os dados"}
     let caajustado= catotal + 0.8*(4-albumina);
     if(albumina>4){return document.querySelector('#resultadoformula').innerHTML= "<h5>"+'Não é necessária correção, nível normal de albumina'+ "<br>";}
     document.querySelector('#resultadoformula').innerHTML= "<h5>"+'Cálcio ajustado: '+caajustado+"mg/dl"+ "<br>";
