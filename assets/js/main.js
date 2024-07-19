@@ -134,7 +134,7 @@ function calcularckd(){
     })
 
     function site(){
-        window.open('https://nefrologistauberaba.negocio.site/', '_target')
+        window.open('https://www.google.com/maps/place/Consult%C3%B3rio+Dr.+Frederico+Rodrigues+da+Cunha+Pereira,+Uberaba/@-19.7576827,-47.9346764,17z/data=!3m1!4b1!4m6!3m5!1s0x94bad1efd6b65fd9:0x469cebdc237a668b!8m2!3d-19.7576827!4d-47.9321015!16s%2Fg%2F11j0yd3j1f?entry=ttu', '_target')
     }
 
     //FUNÇÃO AJUSTE
