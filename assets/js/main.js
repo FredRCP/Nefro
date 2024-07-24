@@ -530,6 +530,10 @@ function link(){
         window.open('mailto:fredrcpmed@gmail.com', '_target');   
 }
 
+function risco(){
+    window.open('https://kidneyfailurerisk.com/', '_target')
+}
+
 //RESETAR
 
     function limpar(){
