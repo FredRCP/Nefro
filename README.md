@@ -1,2 +1,2 @@
 # RCP
-Website voltado para auxílio no atendimento de pacientes em geral
+Website voltado para o uso de profissionais de saúde.
