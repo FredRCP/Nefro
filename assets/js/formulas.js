@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const div22=document.querySelector('#cvvhdf');
         const div23=document.querySelector('#dab');
         const div24=document.querySelector('#cacor');
+        const div25=document.querySelector('#am');
 
 
 
@@ -63,6 +64,8 @@ document.addEventListener("DOMContentLoaded", function() {
         div22.style.display="none";
         div23.style.display="none";
         div24.style.display="none";
+        div25.style.display="none";
+
 
 
         
@@ -125,6 +128,8 @@ document.addEventListener("DOMContentLoaded", function() {
             div23.style.display = 'block'
         } else if (selectedOption === 'cacor') {
             div24.style.display = 'block'
+        } else if (selectedOption === 'am') {
+            div25.style.display = 'block'
         }
         
     });
