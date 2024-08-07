@@ -9,6 +9,7 @@
                 <option value=""></option>
                 <option value="ac">água corporal</option>
                 <option value="ag">ânion gap</option>
+                <option value="am">acidose metabólica</option>
                 <option value="cacor">cálcio, correção pela albumina</option>
                 <option value="calculadora">calculadora</option>
                 <option value="clcrped">clearance de creatinina em pediatria</option>
@@ -71,6 +72,90 @@
                     <button onclick="ag()">Ânion gap</button>
                     <button onclick="limparformula()">Limpar</button>
                     </div>
+                </div>
+            </div>
+
+            <div id="am" style="display: none;">
+                <div class="acidosemetabolica">
+                    <h1>ACIDOSE METABÓLICA (PASSO A PASSO)</h1><br>
+                    <ol>
+                        <li> <b>GASOMETRIA</b> deve ter pH&lt;7,35 e Bic&lt;22.</li><br>
+                        <li>Calcular <b>pCO2 esperada:</b>
+                            <p></p><br>
+                            <p>PaCO2 esperada = 40 + 0.6 x ([HCO3] - 24)</p><br>
+                            <p>ou</p><br>
+                            <p>PaCO2 esperada = 1.5 x [HCO3] + 8 &plusmn; 2</p><br>
+                            <p>-se no alvo: acidose metabólica pura.</p>
+                            <p>-se >: acidose respiratória associada.</p>
+                            <p>-se &lt; : alcalose respiratória associada.</p>
+                        </li><br>
+                        <li>Calcular <b>Anion Gap</b>. Se hipoalbuminemia, corrigir para o valor sérico de albumina.
+                            <p></p><br>
+                            <p>AG = Sódio - (Bicarbonato + Cloro)</p><br>
+                            <p>AG corrigido = AG + 2.5 x (4 - albumina)</p><br>
+                            <p>Valor de referência do AG: 8 - 12mEq/litro.</p>
+                            <p>-se valor normal: Estamos diante de uma acidose metabólica hiperclorêmica; continue no passo <b>4.</b></p>
+                            <p>-se > 12: pule para o passo <b>7.</b></p>
+                        </li><br>
+                        <li>Calcular <b>Ânion GAP urinário</b>
+                            <p></p><br>
+                            <p>AG urinário = (Sódio + Potássio) - Cloro</p>
+                        </li><br>
+                        <li>se <b>AG urinário positivo</b>
+                            <p></p><br>
+                            <p>A causa é renal, podem ser um dos 3 tipos de ATR (acidose tubular renal):</p>
+                            <p>-ATR tipo 1: pH>5,5 e K pode ser baixo/normal;</p>
+                            <p>-ATR tipo 2: pH&lt;5,5 e K baixo;</p>
+                            <p>-ATR tipo 4: pH&lt;5,5 e K alto (Deficiência mineralocorticóides);</p>  
+                        </li><br>
+                        <li>se <b>AG urinário negativo</b>
+                            <p></p><br>
+                            <p>A causa é extra-renal:</p>
+                            <p>-Perda GI de bicarbonato: Diarréia, Drogas(Cloreto de cálcio; Sulfato de magnésio), Drenagem/fístula pancreática;</p>
+                            <p>-Sobrecarga volêmica (excesso de SF0,9%);</p>
+                            <p>-Induzidas por fármacos: Poupadores de potássio, Trimetoprim, IECA/BRA/AINE, Tacrolimus, Heparina, Acetazolamida, Resinas trocadoras(SORCAL).</p>
+                        </li><br>
+                        <li>a partir daqui, apenas acidoses metabólicas com AG aumentado <b>(Ânion Gap > 12)</b>
+                            <p></p><br>
+                            <p>Possíveis causas: Metanol; Uremia/IRA; Cetoacidose (DM, jejum, álcool); Isoniazida e Ferro; Lactato; Etilenoglicol; Salicilatos; outros</p>
+                        </li><br>
+                        <li>Dosar <b>LACTATO</b>
+                            <p></p><br>
+                            <p>-se Lactato aumentado: acidose láctica tipo A (por hipoperfusão), ou tipo B (metformina, b-agonistas, deficiência de tiamina, erros inatos metabolismo, outros). Seguir para passo <b>12.</b></p>
+                            <p>-se Lactato normal: próximo passo.</p>                            
+                        </li><br>
+                        <li>verificar presença de <b>CETOSE:</b>
+                            <p></p><br>
+                            <p>-Dosar CETONEMIA (mais confiável) ou</p>
+                            <p>-CETONÚRIA (A cetonúria não detecta beta-hidroxibutirato e o uso de levodopa, captopril e metildopa pode proporcionar resultados falso-negativos, por isso menos confiável).</p>
+                            <p>-se Cetose positiva, confirmada cetoacidose; pode ser causada por Diabetes Melitus, jejum ou álcool. Seguir para passo <b>12.</b></p>
+                            <p>-Se Cetose negativa, próximo passo.</p>
+                        </li><br>
+                        <li>avaliar <b>FUNÇÃO RENAL:</b>
+                            <p></p><br>
+                            <p>-se IRA / DRC com IRA sobreposta (acidose normalmente presente em pacientes com TFG&lt;20ml/min): acidose pela injuria renal. Seguir para passo <b>12.</b></p> 
+                            <p>-se função renal preservada: seguir para passo <b>11.</b></p>                        
+                        </li><br>
+                        <li>calcular <b>GAP osmolar:</b>
+                            <p></p><br>
+                            <p>GAP osmolar = osmolalidade sérica medida (mmol/kg) - osmolaridade sérica (mmol/l) calculada</p><br>
+                            <p>-se > 10, provável intoxicação exógena;</p>
+                            <p>Principais causas: Metanol; Isoniazida e Ferro; Etilenoglicol; Salicilatos; Paracetamol; Paraldeído; outros.</p>
+                            <p>-se &lt; 10, intoxicação exógena improvável.</p>
+                            <p>Partir para o último passo.</p>                        
+                        </li><br>
+                        <li>Calcular <b>DELTA/DELTA</b> nas acidoses metabólicas com AG aumentado.
+                            <p></p><br>
+                            <p>
+                                delta/delta = (AG -10) / (24-BIC)
+                            </p><br>
+                            <p>-se resultado entre 1 e 2: acidose metabólica com AG aumentado isolada.</p>
+                            <p>-se >2: acidose metabólica com AG aumentado + alcalose metabólica.</p>
+                            <p>-se &lt; 1: acidose metabólica com AG aumentado + acidose hipercloremica.</p>                        
+                        </li>
+                        
+                    </ol>
+                    <p></p>
                 </div>
             </div>
 
@@ -273,7 +358,7 @@
                     <input type="radio" name="rv" id="rv" value="4">Confuso (4 pontos)<br>
                     <input type="radio" name="rv" id="rv" value="3">Palavras inapropriadas (3 pontos)<br>
                     <input type="radio" name="rv" id="rv" value="2">Sons incompreensíveis (2 pontos)<br>
-                    <input type="radio" name="rv" id="rvrvrvrv" value="1">Nenhuma (1 ponto)
+                    <input type="radio" name="rv" id="rv" value="1">Nenhuma (1 ponto)
                 </div> 
             </div>
 
